@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-18 — Restored Castation as a manual-download entry
+
+- Re-added Castation to the PS5 Library main and Nintendo & Sega catalogues with `title_id: PPSA50003`, from the developer's `sce_sys/param.json` source metadata.
+- Confirmed the GitHub release asset `castation-0.4.0.zip`, which includes an ELF-based Homebrew Launcher app rather than an installable PS5 title.
+- Marked Castation as manual-install on the website and updated the setup instructions and developer download link.
+- Kept Castation out of the Pegasus DL installable-title feed and updated the generator so release refreshes preserve these rules.
+- The title ID should help distinguish the entry, but PS5 Library's wrong-game navigation bug is not confirmed fixed until tested on-console.
+
 ## 2026-10-18 — Catalogue display-name metadata
 
 - Declared `name: "Gradwahls Source"` in the main and Pegasus catalogs, and named each optional category feed.

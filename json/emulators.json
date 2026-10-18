@@ -18,6 +18,22 @@
       "title_id": "PPSA99169"
     },
     {
+      "id": "castation-dreamcast",
+      "title": "Castation (Dreamcast)",
+      "platform": "ps5",
+      "version": "v0.4.0",
+      "size": "4.42MB",
+      "description": "Dreamcast emulator (Homebrew Launcher build). The official ZIP contains Castation/eboot.elf, not an installable PS5 title; manually extract to /data/homebrew/ and launch through Homebrew Launcher. No ROMs included.",
+      "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/BrinooTk/castation/releases/download/v0.4.0/castation-0.4.0.zip",
+          "name": "castation-0.4.0.zip"
+        }
+      ],
+      "title_id": "PPSA50003"
+    },
+    {
       "id": "porpoise-dolphin-ps5",
       "title": "Porpoise (GameCube / Wii)",
       "platform": "ps5",

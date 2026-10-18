@@ -78,8 +78,8 @@ def validate(items):
         assert item['cover'].startswith('https://raw.githubusercontent.com/')
 
 def generate(items, check=False):
-    # Homebrew Launcher apps without installable PS5 titles are website-only.
-    library_items = [x for x in items if not x.get('manual_only', False)]
+    # Manual Homebrew Launcher apps are excluded unless explicitly opted in for catalog downloads.
+    library_items = [x for x in items if x.get('ps5_library', not x.get('manual_only', False))]
     main = {'name':'Gradwahls Source', 'entries':[catalog_entry(x) for x in library_items]}
     dump_json(ROOT/'catalog.json', main, check)
     dump_json(ROOT/'json/emulators.json', main, check)
@@ -87,8 +87,8 @@ def generate(items, check=False):
         dump_json(ROOT/'json/categories'/f'{group}.json', {'name':f'Gradwahls Source - {GROUP_LABELS[group]}', 'entries':[catalog_entry(x) for x in library_items if x['group']==group]}, check)
     pegasus = {'name':'Gradwahls Source','packages':[]}
     for item in library_items:
-        if not item.get('title_id'):
-            continue  # Pegasus requires a titleId
+        if item.get('manual_only') or not item.get('title_id'):
+            continue  # Skip manual ELF-based apps; Pegasus only gets installable titles
         pegasus['packages'].append({
             'titleId':item['title_id'], 'title':item['title'], 'version':item['version'],
             'description':item['description'], 'posterUrl':item['cover'],
