@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-18 — Updated PS5SX3 release link to v7.1
+
+- Switched PS5SX3 PS5 Library download from `v7/PPSA99303.zip` to `v7.1/PPSA99303.7z` in the source configuration, main and mirror catalogs, Other category and website data.
+- Verified GitHub v7.1 release asset metadata: 233,951,274 bytes, SHA-256 `4ecd504bb8e1ab02ab723e18014c054949bfa71f7c2adb0aeeb61fdc116ef646` (not an independent download/hash verification).
+- Confirmed PS5 Library documentation supports `.7z` archives; release notes say a PS3 update file was added, but its actual contents and licensing are not independently verified. The README cautions against redistributing Sony firmware.
+- Preserved the existing no-data-mount ELF in the Payload Manager feed, all other PS5 Library entries and the Pegasus exclusions.
+
+
 ## 2026-10-18 — Added user-hosted PS5SX3 ZIP to PS5 Library
 
 - Checked GitHub Release `v7` (`PS5SX3-TB7`): `PPSA99303.zip` is exactly 40,435,329 bytes and matches the previously uploaded archive SHA-256 (`b7761ebd1b50e95d446740bcb83a714df896e51dff1483023c57cb60f37b57e3`).
