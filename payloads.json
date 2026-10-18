@@ -26,6 +26,19 @@
       "author": "ZiZc3",
       "source": "https://github.com/ZiZc3/Ruffle-Flash-PS5",
       "details_url": "https://github.com/ZiZc3/Ruffle-Flash-PS5#install"
+    },
+    {
+      "id": "ps5sx3-no-data-mount-helper",
+      "name": "PS5SX3 Helper (No Data Mount)",
+      "filename": "PS5SXHelper-no-data-mount.elf",
+      "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper-no-data-mount.elf",
+      "version": "vk-285-171",
+      "category": "Emulator Helpers",
+      "description": "No-data-mount helper ELF reported working with a PS5SX3/RPCS3 setup. This is the original PS5SX2 helper published by Swordpdf, not an independently released PS5SX3 helper. It requires a compatible ShadowMount+ version to mount /data first; load ShadowMount+ before this helper. Do not load both PS5SX helper variants in one session. Does not include PS5SX3, BIOS, firmware or games.",
+      "checksum": "3fd3707a2eee7cd68a3a019d3fec19e923db444dd0811d90102ddbf26398484f",
+      "author": "Swordpdf",
+      "source": "https://github.com/Swordpdf/PS5SX2",
+      "details_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171"
     }
   ]
 }

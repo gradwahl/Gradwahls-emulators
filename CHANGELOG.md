@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-18 — Added PS5SX3 no-data-mount helper to Payload Manager
+
+- Added a separate `PS5SXHelper-no-data-mount.elf` entry to the Payload Manager `payloads.json` feed as a PS5SX3 helper, based on the user's tested setup.
+- Linked the original Swordpdf PS5SX2 `vk-285-171` release asset because the uploaded ELF has an identical SHA-256 (`3fd3707a2eee7cd68a3a019d3fec19e923db444dd0811d90102ddbf26398484f`).
+- Documented the original PS5SX2 provenance, ShadowMount+ prerequisite and helper-loading cautions; kept existing entries unchanged.
+- This change does not publish or redistribute the PS5SX3 app ZIP.
+
+
 ## 2026-10-18 — Fix Payload Manager helper filename collision
 
 - Gave XPSemu and Ruffle distinct local ELF filenames (`xpsemu-helper.elf` and `ruffle-flash-helper.elf`) in `payloads.json`.
