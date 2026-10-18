@@ -50,6 +50,22 @@
       "title_id": "PPSA99764"
     },
     {
+      "id": "ps5sx3-ps3",
+      "title": "PS5SX3 (PlayStation 3)",
+      "platform": "ps5",
+      "version": "v7",
+      "size": "40.44MB",
+      "description": "Experimental user-provided PS5SX3/RPCS3 PS3 emulator build, hosted as release v7. Original developer and redistribution rights not independently confirmed. PS5 title folder PPSA99303; may clash with other homebrew using that title ID. Requires ShadowMount+ and a matching helper loaded separately; no PS3 firmware or games included.",
+      "cover": "https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/assets/ps5sx3-icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/gradwahl/Gradwahls-emulators/releases/download/v7/PPSA99303.zip",
+          "name": "PPSA99303.zip"
+        }
+      ],
+      "title_id": "PPSA99303"
+    },
+    {
       "id": "ps5x360",
       "title": "PS5X360 (Xbox 360)",
       "platform": "ps5",

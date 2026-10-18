@@ -56,6 +56,25 @@
     "install_type": "Title folder"
   },
   {
+    "id": "ps5sx3-ps3",
+    "title": "PS5SX3 (PlayStation 3)",
+    "repo": "gradwahl/Gradwahls-emulators",
+    "title_id": "PPSA99303",
+    "category": "Other",
+    "group": "other",
+    "system": "PlayStation 3",
+    "version": "v7",
+    "size_bytes": 40435329,
+    "asset_regex": "^PPSA99303\\.zip$",
+    "filename": "PPSA99303.zip",
+    "release_url": "https://github.com/gradwahl/Gradwahls-emulators/releases/download/v7/PPSA99303.zip",
+    "cover": "https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/assets/ps5sx3-icon0.png",
+    "description": "Experimental user-provided PS5SX3/RPCS3 PS3 emulator build, hosted as release v7. Original developer and redistribution rights not independently confirmed. PS5 title folder PPSA99303; may clash with other homebrew using that title ID. Requires ShadowMount+ and a matching helper loaded separately; no PS3 firmware or games included.",
+    "install_note": "Download and extract the PPSA99303 title folder to /data/homebrew/PPSA99303, then allow a compatible ShadowMount+ to register it. Separately load the no-data-mount helper listed in Gradwahl's ELF Helpers; load compatible ShadowMount+ before the helper. Title ID PPSA99303 may be shared with other homebrew, so verify PS5 Library displays the correct emulator before proceeding. Requires your own PS3 firmware/games. Developer provenance and redistribution permission have not been verified.",
+    "install_type": "Title folder + helper (experimental)",
+    "pegasus": false
+  },
+  {
     "id": "ps5x360",
     "title": "PS5X360 (Xbox 360)",
     "repo": "BrinooTk/PS5X360",

@@ -87,8 +87,8 @@ def generate(items, check=False):
         dump_json(ROOT/'json/categories'/f'{group}.json', {'name':f'Gradwahls Source - {GROUP_LABELS[group]}', 'entries':[catalog_entry(x) for x in library_items if x['group']==group]}, check)
     pegasus = {'name':'Gradwahls Source','packages':[]}
     for item in library_items:
-        if item.get('manual_only') or not item.get('title_id'):
-            continue  # Skip manual ELF-based apps; Pegasus only gets installable titles
+        if item.get('manual_only') or not item.get('title_id') or item.get('pegasus') is False:
+            continue  # Skip manual ELF apps and titles explicitly excluded due to title-ID conflicts
         pegasus['packages'].append({
             'titleId':item['title_id'], 'title':item['title'], 'version':item['version'],
             'description':item['description'], 'posterUrl':item['cover'],

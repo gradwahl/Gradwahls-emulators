@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-18 — Added user-hosted PS5SX3 ZIP to PS5 Library
+
+- Checked GitHub Release `v7` (`PS5SX3-TB7`): `PPSA99303.zip` is exactly 40,435,329 bytes and matches the previously uploaded archive SHA-256 (`b7761ebd1b50e95d446740bcb83a714df896e51dff1483023c57cb60f37b57e3`).
+- Added PS5SX3/RPCS3 to PS5 Library main, mirror and Other category feeds using the verified GitHub Release asset and the archive's actual `PPSA99303` title folder/metadata.
+- Added an optimised copy of the provided title icon for the entry.
+- Retained the no-data-mount ELF in the separate Payload Manager feed; flagged PS5SX3 as experimental/user-provided with provenance and distribution rights unverified.
+- Excluded PS5SX3 from Pegasus DL due to the reused `PPSA99303` title ID; existing six Pegasus entries remain.
+
+
 ## 2026-10-18 — Added PS5SX3 no-data-mount helper to Payload Manager
 
 - Added a separate `PS5SXHelper-no-data-mount.elf` entry to the Payload Manager `payloads.json` feed as a PS5SX3 helper, based on the user's tested setup.
