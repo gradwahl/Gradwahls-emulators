@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-18 — Fix Payload Manager helper filename collision
+
+- Gave XPSemu and Ruffle distinct local ELF filenames (`xpsemu-helper.elf` and `ruffle-flash-helper.elf`) in `payloads.json`.
+- This avoids v0.5.2 treating both payloads as installed when it detects one generic `helper.elf` filename.
+- Preserved each original GitHub release download URL and its SHA-256 checksum; binary contents are unchanged.
+
+
 ## 2026-10-18 — Restored Castation as a manual-download entry
 
 - Re-added Castation to the PS5 Library main and Nintendo & Sega catalogues with `title_id: PPSA50003`, from the developer's `sce_sys/param.json` source metadata.
