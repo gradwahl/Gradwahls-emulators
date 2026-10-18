@@ -29,7 +29,8 @@
     "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
     "description": "Dreamcast emulator built around Flycast. Requires manual extraction and a separate Homebrew Launcher, not a normal PS5 home-screen title.",
     "install_note": "Manual setup: extract to /data/homebrew/Castation and launch using Homebrew Launcher. This ZIP contains an ELF-based app; PS5 Library may only download it.",
-    "install_type": "Homebrew Launcher"
+    "install_type": "Homebrew Launcher",
+    "manual_only": true
   },
   {
     "id": "porpoise-dolphin-ps5",

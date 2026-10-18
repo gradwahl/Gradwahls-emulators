@@ -77,15 +77,17 @@ def validate(items):
         assert item['cover'].startswith('https://raw.githubusercontent.com/')
 
 def generate(items, check=False):
-    main = {'entries':[catalog_entry(x) for x in items]}
+    # Homebrew Launcher apps without installable PS5 titles are website-only.
+    library_items = [x for x in items if not x.get('manual_only', False)]
+    main = {'entries':[catalog_entry(x) for x in library_items]}
     dump_json(ROOT/'catalog.json', main, check)
     dump_json(ROOT/'json/emulators.json', main, check)
     for group in GROUPS:
-        dump_json(ROOT/'json/categories'/f'{group}.json', {'entries':[catalog_entry(x) for x in items if x['group']==group]}, check)
+        dump_json(ROOT/'json/categories'/f'{group}.json', {'entries':[catalog_entry(x) for x in library_items if x['group']==group]}, check)
     pegasus = {'name':"Gradwahl's Emulators",'packages':[]}
-    for item in items:
+    for item in library_items:
         if not item.get('title_id'):
-            continue  # Pegasus requires a titleId; Castation is launcher-based, not a PS5 installed title
+            continue  # Pegasus requires a titleId
         pegasus['packages'].append({
             'titleId':item['title_id'], 'title':item['title'], 'version':item['version'],
             'description':item['description'], 'posterUrl':item['cover'],
@@ -96,7 +98,10 @@ def generate(items, check=False):
     dump_json(ROOT/'json/pegasus_catalog.json', pegasus, check)
     site = []
     for item in items:
-        site.append({k:item.get(k) for k in ['id','title','repo','title_id','category','group','system','version','size_bytes','release_url','cover','description','install_note','install_type']})
+        row = {k:item.get(k) for k in ['id','title','repo','title_id','category','group','system','version','size_bytes','release_url','cover','description','install_note','install_type']}
+        if item.get('manual_only'):
+            row['manual_only'] = True
+        site.append(row)
     dump_json(ROOT/'data/emulators.json', site, check)
 
 def main():
@@ -125,7 +130,7 @@ def main():
             print(f'Keeping pinned releases for {failures} project(s)', file=sys.stderr)
         CONFIG.write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     generate(items, check=args.check)
-    print(f'{len(items)} emulators; outputs {"verified" if args.check else "generated"}.')
+    print(f'{len(items)} emulators ({sum(not x.get("manual_only", False) for x in items)} in PS5 Library); outputs {"verified" if args.check else "generated"}.')
 
 if __name__ == '__main__':
     main()

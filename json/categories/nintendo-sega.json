@@ -1,21 +1,6 @@
 {
   "entries": [
     {
-      "id": "castation-dreamcast",
-      "title": "Castation (Dreamcast)",
-      "platform": "ps5",
-      "version": "v0.4.0",
-      "size": "4.42MB",
-      "description": "Dreamcast emulator built around Flycast. Requires manual extraction and a separate Homebrew Launcher, not a normal PS5 home-screen title.",
-      "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
-      "files": [
-        {
-          "url": "https://github.com/BrinooTk/castation/releases/download/v0.4.0/castation-0.4.0.zip",
-          "name": "castation-0.4.0.zip"
-        }
-      ]
-    },
-    {
       "id": "porpoise-dolphin-ps5",
       "title": "Porpoise (GameCube / Wii)",
       "platform": "ps5",
