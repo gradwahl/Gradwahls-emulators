@@ -1,0 +1,20 @@
+{
+  "entries": [
+    {
+      "id": "retroarch-ps5",
+      "title": "RetroArch PS5",
+      "platform": "ps5",
+      "version": "v3.0.0-beta-3",
+      "size": "1.55GB",
+      "description": "Multi-system emulator frontend with RetroArch and EmulationStation. Requires a compatible PS5 homebrew setup; developer recommends ShadowMountPlus 1.7beta4 or newer.",
+      "cover": "https://raw.githubusercontent.com/mihawk-99/PS5_RetroArch/main/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip",
+          "name": "PS5_RetroArch-v3.0.0-beta-3.zip"
+        }
+      ],
+      "title_id": "PPSA99169"
+    }
+  ]
+}

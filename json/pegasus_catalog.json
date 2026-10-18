@@ -1,0 +1,95 @@
+{
+  "name": "Gradwahl's Emulators",
+  "packages": [
+    {
+      "titleId": "PPSA99169",
+      "title": "RetroArch PS5",
+      "version": "v3.0.0-beta-3",
+      "description": "Multi-system emulator frontend with RetroArch and EmulationStation. Requires a compatible PS5 homebrew setup; developer recommends ShadowMountPlus 1.7beta4 or newer.",
+      "posterUrl": "https://raw.githubusercontent.com/mihawk-99/PS5_RetroArch/main/sce_sys/icon0.png",
+      "downloadSource": "https://github.com/mihawk-99/PS5_RetroArch",
+      "sizeBytes": 1553371958,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip"
+        }
+      ]
+    },
+    {
+      "titleId": "PPSA99764",
+      "title": "Porpoise (GameCube / Wii)",
+      "version": "v3.0",
+      "description": "Native Dolphin-based GameCube and Wii emulator. Requires a jailbroken console and ShadowMountPlus 1.7beta4 or later. Games not included.",
+      "posterUrl": "https://raw.githubusercontent.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/Main/sce_sys/icon0.png",
+      "downloadSource": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+      "sizeBytes": 31018028,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip"
+        }
+      ]
+    },
+    {
+      "titleId": "PPSA50011",
+      "title": "PS5X360 (Xbox 360)",
+      "version": "v0.6.0",
+      "description": "Experimental Xbox 360 emulator. Follow developer firmware, compatibility and setup notes. Games and keys are not included.",
+      "posterUrl": "https://raw.githubusercontent.com/BrinooTk/PS5X360/main/assets/branding/icon0.png",
+      "downloadSource": "https://github.com/BrinooTk/PS5X360",
+      "sizeBytes": 24745309,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/BrinooTk/PS5X360/releases/download/v0.6.0/PPSA50011.zip"
+        }
+      ]
+    },
+    {
+      "titleId": "PPSA97358",
+      "title": "XPSemu (Original Xbox)",
+      "version": "Alpha-2.1",
+      "description": "Experimental original Xbox emulator. ALSO requires helper.elf loaded separately with kstuff and your own hardware-dumped Xbox BIOS and MCPX ROM.",
+      "posterUrl": "https://raw.githubusercontent.com/ZiZc3/XPSemu/main/ps5/sce_sys/icon0.png",
+      "downloadSource": "https://github.com/ZiZc3/XPSemu",
+      "sizeBytes": 21413061,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip"
+        }
+      ]
+    },
+    {
+      "titleId": "PPSA99808",
+      "title": "PICO-8 PS5",
+      "version": "v0.1.2",
+      "description": "PICO-8 launcher for PS5. Requires a separately purchased/licensed Linux PICO-8 copy; the commercial PICO-8 binaries are not included.",
+      "posterUrl": "https://raw.githubusercontent.com/RafaelNGP/pico8-ps5/main/pico8_app/sce_sys/icon0.png",
+      "downloadSource": "https://github.com/RafaelNGP/pico8-ps5",
+      "sizeBytes": 1558254,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip"
+        }
+      ]
+    },
+    {
+      "titleId": "PPSA68091",
+      "title": "Ruffle Flash PS5",
+      "version": "1.2.0",
+      "description": "Flash / SWF emulator. ALSO requires separately loading the upstream helper.elf with kstuff. SWF content is not included.",
+      "posterUrl": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
+      "downloadSource": "https://github.com/ZiZc3/Ruffle-Flash-PS5",
+      "sizeBytes": 13641369,
+      "downloadLinks": [
+        {
+          "name": "GitHub Releases",
+          "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip"
+        }
+      ]
+    }
+  ]
+}

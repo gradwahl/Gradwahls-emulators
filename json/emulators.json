@@ -1,0 +1,115 @@
+{
+  "entries": [
+    {
+      "id": "retroarch-ps5",
+      "title": "RetroArch PS5",
+      "platform": "ps5",
+      "version": "v3.0.0-beta-3",
+      "size": "1.55GB",
+      "description": "Multi-system emulator frontend with RetroArch and EmulationStation. Requires a compatible PS5 homebrew setup; developer recommends ShadowMountPlus 1.7beta4 or newer.",
+      "cover": "https://raw.githubusercontent.com/mihawk-99/PS5_RetroArch/main/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip",
+          "name": "PS5_RetroArch-v3.0.0-beta-3.zip"
+        }
+      ],
+      "title_id": "PPSA99169"
+    },
+    {
+      "id": "castation-dreamcast",
+      "title": "Castation (Dreamcast)",
+      "platform": "ps5",
+      "version": "v0.4.0",
+      "size": "4.42MB",
+      "description": "Dreamcast emulator built around Flycast. Requires manual extraction and a separate Homebrew Launcher, not a normal PS5 home-screen title.",
+      "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/BrinooTk/castation/releases/download/v0.4.0/castation-0.4.0.zip",
+          "name": "castation-0.4.0.zip"
+        }
+      ]
+    },
+    {
+      "id": "porpoise-dolphin-ps5",
+      "title": "Porpoise (GameCube / Wii)",
+      "platform": "ps5",
+      "version": "v3.0",
+      "size": "31.02MB",
+      "description": "Native Dolphin-based GameCube and Wii emulator. Requires a jailbroken console and ShadowMountPlus 1.7beta4 or later. Games not included.",
+      "cover": "https://raw.githubusercontent.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/Main/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip",
+          "name": "Porpoise-3.0.zip"
+        }
+      ],
+      "title_id": "PPSA99764"
+    },
+    {
+      "id": "ps5x360",
+      "title": "PS5X360 (Xbox 360)",
+      "platform": "ps5",
+      "version": "v0.6.0",
+      "size": "24.75MB",
+      "description": "Experimental Xbox 360 emulator. Follow developer firmware, compatibility and setup notes. Games and keys are not included.",
+      "cover": "https://raw.githubusercontent.com/BrinooTk/PS5X360/main/assets/branding/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/BrinooTk/PS5X360/releases/download/v0.6.0/PPSA50011.zip",
+          "name": "PPSA50011.zip"
+        }
+      ],
+      "title_id": "PPSA50011"
+    },
+    {
+      "id": "xpsemu-original-xbox",
+      "title": "XPSemu (Original Xbox)",
+      "platform": "ps5",
+      "version": "Alpha-2.1",
+      "size": "21.41MB",
+      "description": "Experimental original Xbox emulator. ALSO requires helper.elf loaded separately with kstuff and your own hardware-dumped Xbox BIOS and MCPX ROM.",
+      "cover": "https://raw.githubusercontent.com/ZiZc3/XPSemu/main/ps5/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/PPSA97358.zip",
+          "name": "PPSA97358.zip"
+        }
+      ],
+      "title_id": "PPSA97358"
+    },
+    {
+      "id": "pico8-ps5",
+      "title": "PICO-8 PS5",
+      "platform": "ps5",
+      "version": "v0.1.2",
+      "size": "1.56MB",
+      "description": "PICO-8 launcher for PS5. Requires a separately purchased/licensed Linux PICO-8 copy; the commercial PICO-8 binaries are not included.",
+      "cover": "https://raw.githubusercontent.com/RafaelNGP/pico8-ps5/main/pico8_app/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip",
+          "name": "PPSA99808.zip"
+        }
+      ],
+      "title_id": "PPSA99808"
+    },
+    {
+      "id": "ruffle-flash-ps5",
+      "title": "Ruffle Flash PS5",
+      "platform": "ps5",
+      "version": "1.2.0",
+      "size": "13.64MB",
+      "description": "Flash / SWF emulator. ALSO requires separately loading the upstream helper.elf with kstuff. SWF content is not included.",
+      "cover": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip",
+          "name": "PPSA68091.zip"
+        }
+      ],
+      "title_id": "PPSA68091"
+    }
+  ]
+}

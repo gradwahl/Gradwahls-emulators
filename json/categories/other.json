@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "id": "pico8-ps5",
+      "title": "PICO-8 PS5",
+      "platform": "ps5",
+      "version": "v0.1.2",
+      "size": "1.56MB",
+      "description": "PICO-8 launcher for PS5. Requires a separately purchased/licensed Linux PICO-8 copy; the commercial PICO-8 binaries are not included.",
+      "cover": "https://raw.githubusercontent.com/RafaelNGP/pico8-ps5/main/pico8_app/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/RafaelNGP/pico8-ps5/releases/download/v0.1.2/PPSA99808.zip",
+          "name": "PPSA99808.zip"
+        }
+      ],
+      "title_id": "PPSA99808"
+    },
+    {
+      "id": "ruffle-flash-ps5",
+      "title": "Ruffle Flash PS5",
+      "platform": "ps5",
+      "version": "1.2.0",
+      "size": "13.64MB",
+      "description": "Flash / SWF emulator. ALSO requires separately loading the upstream helper.elf with kstuff. SWF content is not included.",
+      "cover": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip",
+          "name": "PPSA68091.zip"
+        }
+      ],
+      "title_id": "PPSA68091"
+    }
+  ]
+}
