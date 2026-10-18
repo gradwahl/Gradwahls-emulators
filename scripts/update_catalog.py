@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / 'config' / 'emulators.json'
 BASE_URL = 'https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main'
 GROUPS = ['multi-system', 'nintendo-sega', 'xbox', 'other']
+GROUP_LABELS = {'multi-system':'Multi-system', 'nintendo-sega':'Nintendo & Sega', 'xbox':'Xbox', 'other':'Other'}
 
 def dump_json(path, value, check=False):
     content = json.dumps(value, ensure_ascii=False, indent=2) + '\n'
@@ -79,12 +80,12 @@ def validate(items):
 def generate(items, check=False):
     # Homebrew Launcher apps without installable PS5 titles are website-only.
     library_items = [x for x in items if not x.get('manual_only', False)]
-    main = {'entries':[catalog_entry(x) for x in library_items]}
+    main = {'name':'Gradwahls Source', 'entries':[catalog_entry(x) for x in library_items]}
     dump_json(ROOT/'catalog.json', main, check)
     dump_json(ROOT/'json/emulators.json', main, check)
     for group in GROUPS:
-        dump_json(ROOT/'json/categories'/f'{group}.json', {'entries':[catalog_entry(x) for x in library_items if x['group']==group]}, check)
-    pegasus = {'name':"Gradwahl's Emulators",'packages':[]}
+        dump_json(ROOT/'json/categories'/f'{group}.json', {'name':f'Gradwahls Source - {GROUP_LABELS[group]}', 'entries':[catalog_entry(x) for x in library_items if x['group']==group]}, check)
+    pegasus = {'name':'Gradwahls Source','packages':[]}
     for item in library_items:
         if not item.get('title_id'):
             continue  # Pegasus requires a titleId

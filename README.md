@@ -11,6 +11,8 @@ A curated, emulator-only homebrew catalog for **[PS5 Library](https://github.com
 2. Add the following raw JSON URL (no access key needed for a public catalog).
 3. Select **Add catalog** (or **Refresh all** if it was already added).
 
+The catalogue declares its display name as **Gradwahls Source** using the root JSON `name` field. **Note:** PS5 Library may still show `raw.githubusercontent.com` if its current UI labels sources by hostname rather than reading catalogue names. In that case, changing the visible label requires a PS5 Library update; the catalogue URL and six emulator entries still work.
+
 ```text
 https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/catalog.json
 ```

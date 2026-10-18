@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-18 — Catalogue display-name metadata
+
+- Declared `name: "Gradwahls Source"` in the main and Pegasus catalogs, and named each optional category feed.
+- Updated the generator so automatic release refreshes preserve the names.
+- PS5 Library may still show the host domain if it does not support displaying catalogue-provided names.
+- Kept the six installable-format emulator entries unchanged.
+
 ## 2026-10-18 — Castation manual-install correction
 
 - Excluded Castation from the PS5 Library main, mirror and Nintendo & Sega catalog feeds because it is an ELF-based Homebrew Launcher app.
