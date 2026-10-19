@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-19 — Expanded PS5SX2 setup instructions in PS5 Library and README
+
+- Made the PS5SX2 PS5 Library description a self-contained manual-install guide, explaining both required folder destinations, BIOS/game paths, helper load order, 755 permissions and PS2 disc shutdown warning.
+- Added a dedicated step-by-step PS5SX2 README section, including careful merging of `/data/PCSX2/` to preserve existing save data.
+- Updated source configuration and generated main/mirror/Other category feeds and web catalogue together, so automatic catalogue regeneration retains the description.
+- No changes to release download URLs, title IDs, PS5SX3 or Payload Manager helpers.
+
+
 ## 2026-10-19 — Added official PS5SX2 emulator and helper
 
 - Added PS5SX2 2.10 (GitHub tag `vk-285-171`, PS5 title ID `PPSA99203`) to PS5 Library main/mirror, Other category and web catalogue.

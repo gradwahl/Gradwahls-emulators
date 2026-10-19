@@ -46,6 +46,19 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 - **RetroArch / Porpoise / PS5X360:** review each upstream readme and your console's firmware and homebrew setup before installing.
 
 
+### Installing PS5SX2 from PS5 Library
+
+PS5SX2 2.10 (`vk-285-171`, PS5 title ID `PPSA99203`) is available in the **Gradwahls Source** catalogue. Its on-screen **description also contains a short setup guide**. **Choose Download, not automatic installation**: the official ZIP contains **two top-level folders** with **different destinations**, which a normal single-folder installer may not handle.
+
+1. Download [`PS5SX2-vk-285-171.zip`](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip) in PS5 Library or on your computer and extract it.
+2. Move the complete `PPSA99203/` directory to **`/data/homebrew/PPSA99203/`**. Check that `eboot.bin`, `sce_sys/` and `sce_module/` are directly inside it, **not** within a second nested `PPSA99203` folder.
+3. Move or merge the ZIP's `PCSX2/` directory into **`/data/PCSX2/`**. **If `/data/PCSX2/` already exists, back up settings, memory cards and saves; merge carefully rather than deleting/replacing your existing data.**
+4. Copy your own dumped **PS2 BIOS** to `/data/PCSX2/bios/`. Put legally obtained game backups in `/data/PCSX2/games/`.
+5. After a PS5 reboot, load your jailbreak/**kstuff**, then **ShadowMount+**, then **exactly one** PS5SX2 helper ELF. The upstream default is [`PS5SXHelper.elf`](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper.elf), which is listed as *PS5SX2 Helper (Standard)* in our [Payload Manager source](payloads.json). The no-data-mount variant (already in that feed) needs ShadowMount+ **1.7-beta5fix1 or later**. **Never load both variants in one session; reboot before switching helpers.**
+6. Start PS5SX2 from the PS5 home screen. If you get **CE-107750-0**, first check permissions on `/data/homebrew/PPSA99203/`, its subfolders and `eboot.bin` (typically **755**, `rwxr-xr-x`) and verify the folder isn't nested. This is a troubleshooting tip, not a guaranteed fix for every error.
+
+**Safety tip from the developer:** remove PS2 discs before shutting down your PS5 to avoid a possible kernel panic. This archive does **not** contain PS2 BIOS files or commercial games.
+
 ### PS5SX3 startup error: CE-107750-0
 
 **Confirmed fix on a PS5:** if PS5SX3 shows **"Can't start the game or app" (CE-107750-0)** immediately after launching, check the **folder and executable permissions** before changing firmware or reinstalling RPCS3. Incorrect permissions on the extracted title folder prevented PS5SX3 from starting; correcting them allowed the app to open.
