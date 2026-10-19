@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-19 — Documented PS5SX3 startup permissions fix
+
+- Added confirmed troubleshooting instructions for PS5SX3's `CE-107750-0` launch error to the README.
+- Documented setting the `/data/homebrew/PPSA99303/` folder and `eboot.bin` to Unix mode `755`, checking parent/subfolder traversal permissions, avoiding nested title folders and loading ShadowMount+ before the no-data-mount helper.
+- Clarified that this is one verified fix, not a universal remedy for the error code; PS5 Library catalogues and payload URLs remain unchanged.
+
+
 ## 2026-10-18 — Updated PS5SX3 release link to v7.1
 
 - Switched PS5SX3 PS5 Library download from `v7/PPSA99303.zip` to `v7.1/PPSA99303.7z` in the source configuration, main and mirror catalogs, Other category and website data.

@@ -43,6 +43,20 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 - **PICO-8 PS5:** requires a legally licensed copy of PICO-8 Linux. The archive does not contain `pico8_dyn` or `pico8.dat`. [Instructions](https://github.com/RafaelNGP/pico8-ps5#installation).
 - **RetroArch / Porpoise / PS5X360:** review each upstream readme and your console's firmware and homebrew setup before installing.
 
+
+### PS5SX3 startup error: CE-107750-0
+
+**Confirmed fix on a PS5:** if PS5SX3 shows **"Can't start the game or app" (CE-107750-0)** immediately after launching, check the **folder and executable permissions** before changing firmware or reinstalling RPCS3. Incorrect permissions on the extracted title folder prevented PS5SX3 from starting; correcting them allowed the app to open.
+
+1. Using FTP (for example, FileZilla) or a file manager that can change Unix permissions, navigate to `/data/homebrew/PPSA99303/`.
+2. Check the **`PPSA99303` folder itself**: set permissions to **755** (`rwxr-xr-x`). Make sure its parent directory `/data/homebrew/` is also traversable and its subdirectories (`sce_sys/`, `sce_module/`, etc.) have suitable execute/traverse permission (commonly **755**).
+3. Check `/data/homebrew/PPSA99303/eboot.bin`: set permissions to **755** so it can be executed. Ordinary data files do not all need executable permission; avoid setting the whole tree to **777**.
+4. Confirm the layout is `/data/homebrew/PPSA99303/eboot.bin`, **not** `/data/homebrew/PPSA99303/PPSA99303/eboot.bin`.
+5. Ensure your jailbreak and kstuff are running, load a compatible **ShadowMount+**, then the **PS5SXHelper-no-data-mount.elf** payload, and try opening PS5SX3 again.
+
+This addresses an observed permission-related startup failure, **not every possible cause** of CE-107750-0. If it still fails, check ShadowMount+ registration/logs and the actual error code. The `rpcs3` data directory may not exist until the emulator starts successfully; do not download a desktop/Linux RPCS3 binary to fix this.
+
+
 No ROMs, games, commercial binaries, console keys or BIOS/firmware dumps are bundled.
 
 ## 📂 Catalog feeds
