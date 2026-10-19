@@ -71,7 +71,7 @@
       "platform": "ps5",
       "version": "v7.1",
       "size": "233.95MB",
-      "description": "Experimental user-hosted PS5SX3/RPCS3 PlayStation 3 emulator build, v7.1 (.7z). Release notes say a PS3 update file was added; archive contents and redistribution permissions have not been independently verified. Title ID PPSA99303 may conflict with other homebrew. Requires ShadowMount+ and a separate helper ELF.",
+      "description": "PS5SX3 v7.1 — experimental PlayStation 3 emulator (RPCS3).\n\nINSTALL — .7z archive:\n1. PPSA99303/ → /data/homebrew/PPSA99303/\n2. Check eboot.bin and sce_sys/ are directly inside.\n\nBEFORE YOU PLAY\n• Load jailbreak/kstuff → ShadowMount+ → PS5SXHelper-no-data-mount.elf.\n• ShadowMount+ must provide /data; this helper does not mount it.\n• PS3 firmware: get PS3UPDAT.PUP from Sony; never use PS5 system update.\n\nIF IT WON'T START\n• CE-107750-0? Set title folder and eboot.bin permissions to 755.\n• Check there is no extra nested PPSA99303/ folder.\n\nNOTE: v7.1 release mentions a PS3 update file; redistribution rights unverified. Title ID PPSA99303 may be shared with other homebrew.",
       "cover": "https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/assets/ps5sx3-icon0.png",
       "files": [
         {

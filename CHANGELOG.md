@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-19 — Improved PS5SX3 PS5 Library installation description
+
+- Reformatted the on-console PS5SX3 description with clear plain-text INSTALL, BEFORE YOU PLAY and IF IT WON'T START sections, matching the PS5SX2 style.
+- Included the exact `/data/homebrew/PPSA99303/` folder path, `eboot.bin` placement, ShadowMount+ -> no-data-mount helper order, and the confirmed `CE-107750-0` permissions fix (`755`).
+- Added a dedicated PS5SX3 README installation guide, with Sony PS3 firmware guidance and warnings about unverified provenance, distribution rights, and overlapping title IDs.
+- Updated source configuration and generated main, mirror, Other-category and website descriptions together so scheduled updates preserve the formatting. ZIP/7z download URLs, versions and helper entries remain unchanged.
+
+
 ## 2026-10-19 — Improved PS5SX2 PS5 Library description layout
 
 - Reformatted the on-console PS5SX2 description as plain text with headings, line breaks, numbered installation folder paths and short troubleshooting bullets.

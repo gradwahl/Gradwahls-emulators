@@ -59,6 +59,18 @@ PS5SX2 2.10 (`vk-285-171`, PS5 title ID `PPSA99203`) is available in the **Gradw
 
 **Safety tip from the developer:** remove PS2 discs before shutting down your PS5 to avoid a possible kernel panic. This archive does **not** contain PS2 BIOS files or commercial games.
 
+### Installing PS5SX3 from PS5 Library
+
+PS5SX3 v7.1 is an **experimental, user-hosted PlayStation 3 (RPCS3) emulator**. The [v7.1 GitHub release](https://github.com/gradwahl/Gradwahls-emulators/releases/tag/v7.1) provides `PPSA99303.7z` (approximately 234 MB). PS5 Library supports `.7z` extraction; the on-console **PS5SX3 description includes the short installation guide**.
+
+1. Download and unpack `PPSA99303.7z`. Put the **complete `PPSA99303/` title folder** in **`/data/homebrew/PPSA99303/`**.
+2. Check that `/data/homebrew/PPSA99303/eboot.bin` and `sce_sys/` are **directly inside** that folder. Do **not** leave a double-nested path such as `PPSA99303/PPSA99303/eboot.bin`.
+3. Load your jailbreak and **kstuff**, then a compatible **ShadowMount+**, then **`PS5SXHelper-no-data-mount.elf`** using [Gradwahl's Payload Manager feed](payloads.json). This helper **does not mount `/data` itself**: ShadowMount+ must provide the mount. Do not load both PS5SX helper variants in the same session.
+4. Launch PS5SX3. If the PS5 displays **`CE-107750-0`** ("Can't start the game or app"), check that the **`PPSA99303/` title folder** and **`eboot.bin`** have Unix permissions **755** (`rwxr-xr-x`). Its parent/subdirectories must also be traversable. Incorrect title-folder permissions caused this exact launch error and fixing them let PS5SX3 open on a tested PS5. See the [permissions troubleshooting guide](#ps5sx3-startup-error-ce-107750-0) below.
+5. **PS3 firmware:** RPCS3 uses Sony's **`PS3UPDAT.PUP`**, obtainable from [Sony's PS3 system software page](https://www.playstation.com/en-gb/support/hardware/ps3/system-software/). The v7.1 release says a PS3 update file was added, but its contents, licensing and exact installation behaviour have **not** been independently verified. Never select a PS5 system software update to install PS3 emulator firmware, and don't redistribute Sony's firmware without permission.
+
+**Important:** `PPSA99303` may overlap with other homebrew title IDs, so check that the PS5 home-screen tile actually opens **PS5SX3**. The original author and redistribution permissions for this user-supplied test build remain unverified. The `rpcs3` data directory may not be created until the emulator successfully launches; you **do not** need to install desktop/Linux RPCS3 separately.
+
 ### PS5SX3 startup error: CE-107750-0
 
 **Confirmed fix on a PS5:** if PS5SX3 shows **"Can't start the game or app" (CE-107750-0)** immediately after launching, check the **folder and executable permissions** before changing firmware or reinstalling RPCS3. Incorrect permissions on the extracted title folder prevented PS5SX3 from starting; correcting them allowed the app to open.
