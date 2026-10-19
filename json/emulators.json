@@ -7,7 +7,7 @@
       "platform": "ps5",
       "version": "v3.0.0-beta-3",
       "size": "1.55GB",
-      "description": "Multi-system emulator frontend with RetroArch and EmulationStation. Requires a compatible PS5 homebrew setup; developer recommends ShadowMountPlus 1.7beta4 or newer.",
+      "description": "RetroArch PS5 — multi-system emulator + EmulationStation.\n\nINSTALL\n1. PPSA99169/ → /data/homebrew/PPSA99169/\n2. Load jailbreak + ShadowMountPlus 1.7beta4+.\n\nBEFORE YOU PLAY\n• Choose RetroArch or EmulationStation; Square remembers.\n• WebUI: http://YOUR-PS5-IP:6769\n• Games: PPSA99169/content/ or add through WebUI.\n• BIOS: PPSA99169/system/ (system-dependent).\n\nIF IT WON'T START\n• Check title folder/eboot.bin and ShadowMount+.\n• Hold L1 at startup to choose the frontend again.\n• No desktop RetroArch cores; use included PS5 cores.",
       "cover": "https://raw.githubusercontent.com/mihawk-99/PS5_RetroArch/main/sce_sys/icon0.png",
       "files": [
         {
@@ -23,7 +23,7 @@
       "platform": "ps5",
       "version": "v0.4.0",
       "size": "4.42MB",
-      "description": "Dreamcast emulator (Homebrew Launcher build). The official ZIP contains Castation/eboot.elf, not an installable PS5 title; manually extract to /data/homebrew/ and launch through Homebrew Launcher. No ROMs included.",
+      "description": "Castation v0.4.0 — Dreamcast emulator (Flycast).\n\nMANUAL INSTALL — HOMEBREW LAUNCHER:\n1. Castation/ → /data/homebrew/Castation/\n2. Check Castation/eboot.elf and homebrew.js exist.\n3. Open Homebrew Launcher → Castation (NOT a PS5 title).\n\nBEFORE YOU PLAY\n• Games → /data/homebrew/Castation/games/\n• BIOS optional → Castation/bios/; use HLE BIOS otherwise.\n\nIF IT WON'T START\n• Check eboot.elf placement and that Homebrew Launcher is running.\n• If PS5 Library opens another title, launch Castation manually.",
       "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
       "files": [
         {
@@ -39,7 +39,7 @@
       "platform": "ps5",
       "version": "v3.0",
       "size": "31.02MB",
-      "description": "Native Dolphin-based GameCube and Wii emulator. Requires a jailbroken console and ShadowMountPlus 1.7beta4 or later. Games not included.",
+      "description": "Porpoise v3.0 — GameCube + Wii emulator (Dolphin).\n\nINSTALL\n1. PPSA99764/ → /data/homebrew/PPSA99764/\n2. Register with ShadowMountPlus 1.7beta4+.\n\nBEFORE YOU PLAY\n• Games → /data/porpoise/games/ or USB.\n• Load kstuff + supported jailbreak (etaHEN, etc.).\n• Keep saves in /data/porpoise/ when updating.\n\nIF IT WON'T START\n• Check ShadowMount+ version, folder and eboot.bin.\n• Can't access /data? Check etaHEN Legacy Command Server.\n• Use FTP binary transfers when copying files.",
       "cover": "https://raw.githubusercontent.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/Main/sce_sys/icon0.png",
       "files": [
         {
@@ -87,7 +87,7 @@
       "platform": "ps5",
       "version": "v0.6.0",
       "size": "24.75MB",
-      "description": "Experimental Xbox 360 emulator. Follow developer firmware, compatibility and setup notes. Games and keys are not included.",
+      "description": "PS5X360 v0.6.0 — experimental Xbox 360 emulator.\n\nINSTALL\n1. PPSA50011/ → /data/homebrew/PPSA50011/\n2. Register with ShadowMount+ and launch from Home.\n\nBEFORE YOU PLAY\n• Games: PPSA50011/assets/roms/GAME NAME/\n• Keep default.xex/ISO and related game files together.\n• Load compatible jailbreak, kstuff and ShadowMount+.\n\nIF IT WON'T START\n• Check title folder/eboot.bin and permissions.\n• Use Settings → Refresh game list if games are missing.\n• Not all Xbox 360 titles work; check compatibility.",
       "cover": "https://raw.githubusercontent.com/BrinooTk/PS5X360/main/assets/branding/icon0.png",
       "files": [
         {
@@ -103,7 +103,7 @@
       "platform": "ps5",
       "version": "Alpha-2.1",
       "size": "21.41MB",
-      "description": "Experimental original Xbox emulator. ALSO requires helper.elf loaded separately with kstuff and your own hardware-dumped Xbox BIOS and MCPX ROM.",
+      "description": "XPSemu Alpha-2.1 — original Xbox emulator (xemu).\n\nINSTALL\n1. PPSA97358/ → /data/homebrew/PPSA97358/\n2. Load kstuff + ShadowMountPlus + XPSemu Helper ELF.\n\nBEFORE YOU PLAY\n• /data/xemu/mcpx_1.0.bin — your own MCPX ROM.\n• /data/xemu/Complex_4627.bin — your own Xbox BIOS.\n• Games → /data/xemu/games/ (XISO format).\n\nIF IT WON'T START\n• 'helper.elf didn't answer'? Load XPSemu helper first.\n• Setup screen shows which BIOS/ROM files are missing.",
       "cover": "https://raw.githubusercontent.com/ZiZc3/XPSemu/main/ps5/sce_sys/icon0.png",
       "files": [
         {
@@ -119,7 +119,7 @@
       "platform": "ps5",
       "version": "v0.1.2",
       "size": "1.56MB",
-      "description": "PICO-8 launcher for PS5. Requires a separately purchased/licensed Linux PICO-8 copy; the commercial PICO-8 binaries are not included.",
+      "description": "PICO-8 PS5 v0.1.2 — fantasy-console launcher.\n\nINSTALL\n1. PPSA99808/ → /data/homebrew/PPSA99808/\n2. Copy licensed Linux PICO-8 files to PPSA99808/pico8/:\n   pico8_dyn AND pico8.dat (both required).\n\nBEFORE YOU PLAY\n• Load kstuff + ShadowMountPlus + elfldr (:9021).\n• Launch PICO-8 from the PS5 home screen.\n\nIF IT WON'T START\n• Check both PICO-8 files and matching version.\n• Log: /data/pico8/loader.log\n• Licensed PICO-8 files are NOT in the catalog ZIP.",
       "cover": "https://raw.githubusercontent.com/RafaelNGP/pico8-ps5/main/pico8_app/sce_sys/icon0.png",
       "files": [
         {
@@ -135,7 +135,7 @@
       "platform": "ps5",
       "version": "1.2.0",
       "size": "13.64MB",
-      "description": "Flash / SWF emulator. ALSO requires separately loading the upstream helper.elf with kstuff. SWF content is not included.",
+      "description": "Ruffle Flash PS5 v1.2.0 — SWF / Flash emulator.\n\nINSTALL\n1. PPSA68091/ → /data/homebrew/PPSA68091/\n2. Load kstuff + ShadowMountPlus + Ruffle Helper ELF.\n\nBEFORE YOU PLAY\n• Put .swf games in /data/ruffle/games/.\n• Keep each game's extra files in its own folder.\n• Start Ruffle Flash from the PS5 home screen.\n\nIF IT WON'T START\n• Check Ruffle's matching helper is loaded.\n• Check title folder/eboot.bin and ShadowMount+.\n• Log: /data/ruffle/ruffle.log",
       "cover": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
       "files": [
         {

@@ -46,6 +46,86 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 - **RetroArch / Porpoise / PS5X360:** review each upstream readme and your console's firmware and homebrew setup before installing.
 
 
+
+### Installing Castation from PS5 Library
+
+[Castation v0.4.0](https://github.com/BrinooTk/castation/releases/tag/v0.4.0) is a **Dreamcast / Flycast Homebrew Launcher app**. The catalogue entry is **download-only**, not a native PS5 title: its executable is `eboot.elf`, not `eboot.bin`.
+
+1. Download and extract the ZIP. Put the entire **`Castation/`** directory into **`/data/homebrew/Castation/`**.
+2. Verify that `/data/homebrew/Castation/eboot.elf` and `homebrew.js` exist directly in that folder.
+3. Put legally obtained Dreamcast disc images in **`/data/homebrew/Castation/games/`**. A Dreamcast BIOS is optional at `Castation/bios/`; without one, switch on **HLE BIOS** in Castation's settings *before* opening a disc.
+4. **Open Castation with Homebrew Launcher**, not the normal PS5 title installer. Save files and logs are written to `/data/Castation/`.
+
+**Troubleshooting:** if the app is missing from Homebrew Launcher, confirm the `eboot.elf` and `homebrew.js` file names and directory. If selecting Castation in PS5 Library opens an unrelated home-screen game, launch it through Homebrew Launcher instead; its catalogue title ID may not resolve correctly. [Official installation guide](https://github.com/BrinooTk/castation#installing).
+
+### Installing RetroArch PS5 from PS5 Library
+
+[RetroArch PS5](https://github.com/mihawk-99/PS5_RetroArch), release `v3.0.0-beta-3`, includes **RetroArch, EmulationStation and native PS5 libretro cores**.
+
+1. Extract the complete **`PPSA99169/`** directory into **`/data/homebrew/PPSA99169/`**. `eboot.bin`, `sce_sys/` and the other supplied files must remain in the title folder.
+2. Use a compatible jailbreak/homebrew loader and **ShadowMountPlus 1.7beta4 or later**, especially for USB and extended-storage support. Open RetroArch from the PS5 home screen.
+3. Choose **RetroArch** or **EmulationStation** at the frontend picker. Press **Square** to remember your choice; hold **L1 while starting** to return to the picker.
+4. Open its WebUI from another device on the same LAN at **`http://<PS5-IP>:6769`**. Add your legally obtained games using **Games → Add Game** or by copying them into `/data/homebrew/PPSA99169/content/`. Put BIOS and system files you dumped from your own hardware under the appropriate `system/` subdirectory.
+5. Keep a backup of `savefiles/`, `savestates/` and configuration before replacing the title folder during an upgrade.
+
+**Troubleshooting:** confirm the complete `PPSA99169` title folder and ShadowMount+ load order. Only the **PS5-native cores shipped with this port** are compatible, not ordinary desktop cores. [Official setup](https://github.com/mihawk-99/PS5_RetroArch#get-started).
+
+### Installing Porpoise (GameCube / Wii) from PS5 Library
+
+[Porpoise v3.0](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5) uses Dolphin's core for **GameCube and Wii** games.
+
+1. Extract **`PPSA99764/`** into **`/data/homebrew/PPSA99764/`**, keeping all files together. If using FTP, use **binary transfer mode** (some text files can be damaged in text mode).
+2. Load a compatible jailbreak, **kstuff**, and **ShadowMountPlus 1.7 beta 4 or later**; register the title and open Porpoise from the home screen.
+3. Put your game backups in **`/data/porpoise/games/`** (the emulator may create this folder on first launch). It can also scan USB drives and other user-selected folders.
+4. Save data, memory cards, box art and settings live under **`/data/porpoise/`**. Back that folder up before deleting/replacing an installation. Optional GameCube IPL BIOS dumped from your own hardware goes in `/data/porpoise/bios/`.
+
+**Troubleshooting:** if Porpoise closes on launch, check ShadowMountPlus is **1.7 beta 4+**. If it says it cannot access `/data` under etaHEN, enable **Legacy Command Server** in etaHEN Toolbox. [Official setup and troubleshooting](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5#install).
+
+### Installing PS5X360 from PS5 Library
+
+[PS5X360 v0.6.0](https://github.com/BrinooTk/PS5X360) is an **experimental Xbox 360 emulator**.
+
+1. Extract the complete **`PPSA50011/`** title folder to **`/data/homebrew/PPSA50011/`** (with `eboot.bin` and `sce_sys/` directly inside).
+2. Load your jailbreak, **kstuff** and **ShadowMountPlus**, then launch PS5X360 from the PS5 home screen.
+3. Put legally obtained Xbox 360 game backups into **separate folders under `/data/homebrew/PPSA50011/assets/roms/`**. For example, `assets/roms/Game Name/default.xex` and its related files, or an ISO/GOD package with its companion data. Do not flatten game folders.
+4. Use **Settings → Refresh game list** after adding games. The developer also documents **Settings → Game folders** for additional locations.
+
+**Troubleshooting:** check `PPSA50011/eboot.bin`, the full title folder and ShadowMount+ registration. Xbox 360 compatibility is experimental; do not assume every backup boots. The developer tested primarily with a firmware 13.60 homebrew setup. [Official instructions](https://github.com/BrinooTk/PS5X360/blob/main/docs/INSTALLATION.md).
+
+### Installing XPSemu (Original Xbox) from PS5 Library
+
+[XPSemu Alpha-2.1](https://github.com/ZiZc3/XPSemu/releases/tag/Alpha-2.1) is an experimental **original Xbox** emulator based on xemu.
+
+1. Extract **`PPSA97358/`** into **`/data/homebrew/PPSA97358/`**, then load a supported jailbreak, **kstuff** and **ShadowMountPlus**.
+2. Load the matching **XPSemu Helper** separately from [Gradwahl's Payload Manager feed](payloads.json). The upstream file is `helper.elf`; in the feed its local filename is **`xpsemu-helper.elf`**, preventing a collision with other helpers.
+3. Put the **MCPX boot ROM** (`mcpx_1.0.bin`) and **Xbox BIOS** (`Complex_4627.bin`) dumped from your own console in **`/data/xemu/`**. Use these exact filenames. If there is no `xbox_hdd.qcow2`, XPSemu creates a blank Xbox hard disk automatically.
+4. Put your own XISO-format game backups (`.iso` or `.xiso`) into **`/data/xemu/games/`** or `xemu/games/` on USB. Full raw Redump images may need conversion to XISO format.
+5. Start XPSemu from your PS5 home screen. Settings, save data and logs live under `/data/xemu/`.
+
+**Troubleshooting:** if the app immediately closes or displays **"helper.elf didn't answer"**, verify that **kstuff and the XPSemu-specific ELF helper** are loaded. The setup screen identifies missing ROM/BIOS files. [Official installation](https://github.com/ZiZc3/XPSemu#installation).
+
+### Installing PICO-8 PS5 from PS5 Library
+
+[PICO-8 PS5 v0.1.2](https://github.com/RafaelNGP/pico8-ps5) is a launcher for a **separately licensed Linux copy of PICO-8**.
+
+1. Extract the entire **`PPSA99808/`** folder to **`/data/homebrew/PPSA99808/`**.
+2. From your **legally purchased PICO-8 Linux archive**, copy **both** `pico8_dyn` and `pico8.dat` to **`/data/homebrew/PPSA99808/pico8/`**. The catalogue ZIP **does not contain** these commercial binaries.
+3. Load **kstuff** and **ShadowMountPlus**, and ensure **elfldr** is listening on **`127.0.0.1:9021`** for `/data` sandbox elevation. The app contains its own `sandbox-elevator.elf`; it does not need the separate XPSemu/Ruffle helpers.
+4. Wait for ShadowMount+ to register `PPSA99808`, then open PICO-8 from your PS5 home screen. Its settings, downloaded carts and saves live under **`/data/pico8/`**, so keep that folder when updating.
+
+**Troubleshooting:** check that both PICO-8 files are present and from the appropriate Linux package; a missing file or incompatible version triggers a notice. Look at **`/data/pico8/loader.log`** if it freezes or closes. [Official installation](https://github.com/RafaelNGP/pico8-ps5#installation).
+
+### Installing Ruffle Flash PS5 from PS5 Library
+
+[Ruffle Flash PS5 v1.2.0](https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/tag/1.2.0) plays many **Flash / SWF** games.
+
+1. Extract the complete **`PPSA68091/`** title folder into **`/data/homebrew/PPSA68091/`**.
+2. Load **kstuff** and **ShadowMountPlus**, then load the **Ruffle Flash PS5 Helper** from [Gradwahl's Payload Manager source](payloads.json). This is the specific Ruffle helper (original GitHub release filename `helper.elf`; local feed filename **`ruffle-flash-helper.elf`**).
+3. Copy your `.swf` games to **`/data/ruffle/games/`**. If a Flash game relies on extra `media/` or `db/` files, keep everything together in its own subfolder, such as `/data/ruffle/games/Game Name/`.
+4. Open Ruffle Flash from the PS5 home screen. Optional covers go in `/data/ruffle/covers/`, save data in `/data/ruffle/saves/`; the last-session log is **`/data/ruffle/ruffle.log`**.
+
+**Troubleshooting:** if Ruffle won't start, verify that the **Ruffle-specific helper** is loaded and the title folder has been registered. Some online-only Flash functions and demanding ActionScript 3 games may not work. [Official installation](https://github.com/ZiZc3/Ruffle-Flash-PS5#install).
+
 ### Installing PS5SX2 from PS5 Library
 
 PS5SX2 2.10 (`vk-285-171`, PS5 title ID `PPSA99203`) is available in the **Gradwahls Source** catalogue. Its on-screen **description also contains a short setup guide**. **Choose Download, not automatic installation**: the official ZIP contains **two top-level folders** with **different destinations**, which a normal single-folder installer may not handle.

@@ -7,7 +7,7 @@
       "platform": "ps5",
       "version": "v0.4.0",
       "size": "4.42MB",
-      "description": "Dreamcast emulator (Homebrew Launcher build). The official ZIP contains Castation/eboot.elf, not an installable PS5 title; manually extract to /data/homebrew/ and launch through Homebrew Launcher. No ROMs included.",
+      "description": "Castation v0.4.0 — Dreamcast emulator (Flycast).\n\nMANUAL INSTALL — HOMEBREW LAUNCHER:\n1. Castation/ → /data/homebrew/Castation/\n2. Check Castation/eboot.elf and homebrew.js exist.\n3. Open Homebrew Launcher → Castation (NOT a PS5 title).\n\nBEFORE YOU PLAY\n• Games → /data/homebrew/Castation/games/\n• BIOS optional → Castation/bios/; use HLE BIOS otherwise.\n\nIF IT WON'T START\n• Check eboot.elf placement and that Homebrew Launcher is running.\n• If PS5 Library opens another title, launch Castation manually.",
       "cover": "https://raw.githubusercontent.com/BrinooTk/castation/main/sce_sys/icon0.png",
       "files": [
         {
@@ -23,7 +23,7 @@
       "platform": "ps5",
       "version": "v3.0",
       "size": "31.02MB",
-      "description": "Native Dolphin-based GameCube and Wii emulator. Requires a jailbroken console and ShadowMountPlus 1.7beta4 or later. Games not included.",
+      "description": "Porpoise v3.0 — GameCube + Wii emulator (Dolphin).\n\nINSTALL\n1. PPSA99764/ → /data/homebrew/PPSA99764/\n2. Register with ShadowMountPlus 1.7beta4+.\n\nBEFORE YOU PLAY\n• Games → /data/porpoise/games/ or USB.\n• Load kstuff + supported jailbreak (etaHEN, etc.).\n• Keep saves in /data/porpoise/ when updating.\n\nIF IT WON'T START\n• Check ShadowMount+ version, folder and eboot.bin.\n• Can't access /data? Check etaHEN Legacy Command Server.\n• Use FTP binary transfers when copying files.",
       "cover": "https://raw.githubusercontent.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/Main/sce_sys/icon0.png",
       "files": [
         {

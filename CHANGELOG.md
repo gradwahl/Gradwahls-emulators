@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-19 — Added clear setup instructions for seven more emulators
+
+- Replaced long single-paragraph PS5 Library descriptions with plain-text INSTALL, BEFORE YOU PLAY, and IF IT WON'T START sections for Castation, RetroArch PS5, Porpoise, PS5X360, XPSemu, PICO-8 PS5, and Ruffle Flash PS5.
+- Checked all seven installation flows against their developer READMEs and added separate detailed README guides for each.
+- Highlighted Castation as a Homebrew Launcher ELF (not an installable PS5 title); appropriate title-folder destinations; game, BIOS and licensed data locations; precise ELF helper requirements; and useful upstream-specific troubleshooting.
+- Regenerated source, main/mirror, category, Pegasus and website feeds together to preserve automatic-update consistency.
+- All nine emulator download URLs, version/title metadata and all four Payload Manager entries remain unchanged.
+
+
 ## 2026-10-19 — Improved PS5SX3 PS5 Library installation description
 
 - Reformatted the on-console PS5SX3 description with clear plain-text INSTALL, BEFORE YOU PLAY and IF IT WON'T START sections, matching the PS5SX2 style.

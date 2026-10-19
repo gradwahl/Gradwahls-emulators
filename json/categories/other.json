@@ -39,7 +39,7 @@
       "platform": "ps5",
       "version": "v0.1.2",
       "size": "1.56MB",
-      "description": "PICO-8 launcher for PS5. Requires a separately purchased/licensed Linux PICO-8 copy; the commercial PICO-8 binaries are not included.",
+      "description": "PICO-8 PS5 v0.1.2 — fantasy-console launcher.\n\nINSTALL\n1. PPSA99808/ → /data/homebrew/PPSA99808/\n2. Copy licensed Linux PICO-8 files to PPSA99808/pico8/:\n   pico8_dyn AND pico8.dat (both required).\n\nBEFORE YOU PLAY\n• Load kstuff + ShadowMountPlus + elfldr (:9021).\n• Launch PICO-8 from the PS5 home screen.\n\nIF IT WON'T START\n• Check both PICO-8 files and matching version.\n• Log: /data/pico8/loader.log\n• Licensed PICO-8 files are NOT in the catalog ZIP.",
       "cover": "https://raw.githubusercontent.com/RafaelNGP/pico8-ps5/main/pico8_app/sce_sys/icon0.png",
       "files": [
         {
@@ -55,7 +55,7 @@
       "platform": "ps5",
       "version": "1.2.0",
       "size": "13.64MB",
-      "description": "Flash / SWF emulator. ALSO requires separately loading the upstream helper.elf with kstuff. SWF content is not included.",
+      "description": "Ruffle Flash PS5 v1.2.0 — SWF / Flash emulator.\n\nINSTALL\n1. PPSA68091/ → /data/homebrew/PPSA68091/\n2. Load kstuff + ShadowMountPlus + Ruffle Helper ELF.\n\nBEFORE YOU PLAY\n• Put .swf games in /data/ruffle/games/.\n• Keep each game's extra files in its own folder.\n• Start Ruffle Flash from the PS5 home screen.\n\nIF IT WON'T START\n• Check Ruffle's matching helper is loaded.\n• Check title folder/eboot.bin and ShadowMount+.\n• Log: /data/ruffle/ruffle.log",
       "cover": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
       "files": [
         {
