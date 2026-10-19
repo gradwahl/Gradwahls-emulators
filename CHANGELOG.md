@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-19 — Added official PS5SX2 emulator and helper
+
+- Added PS5SX2 2.10 (GitHub tag `vk-285-171`, PS5 title ID `PPSA99203`) to PS5 Library main/mirror, Other category and web catalogue.
+- Linked official `PS5SX2-vk-285-171.zip` asset (18,523,969 bytes; release SHA-256 `226ac24866f0b94566c0680c3b99c0d5abfe8030723f5b28dae20af039c76963`).
+- Marked PS5SX2 manual-install/download-only and excluded it from Pegasus because the ZIP has two top-level folders with separate destinations: `PPSA99203/` under `/data/homebrew/` and `PCSX2/` under `/data/`.
+- Added official default PS5SX2 helper as a separate Payload Manager entry, filename `ps5sx2-helper.elf`, hash `9fa809eb10e1fe5149b2d031f55497d7b050e950ec5aec38bac7ebe1ef6da153`; the previous no-data-mount helper entry remains unchanged.
+- Documented required BIOS and games paths, ShadowMount+ and helper load order, permissions troubleshooting, and PS2 disc shutdown warning.
+
+
 ## 2026-10-19 — Documented PS5SX3 startup permissions fix
 
 - Added confirmed troubleshooting instructions for PS5SX3's `CE-107750-0` launch error to the README.

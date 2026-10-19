@@ -11,7 +11,7 @@ A curated, emulator-only homebrew catalog for **[PS5 Library](https://github.com
 2. Add the following raw JSON URL (no access key needed for a public catalog).
 3. Select **Add catalog** (or **Refresh all** if it was already added).
 
-The catalogue declares its display name as **Gradwahls Source** using the root JSON `name` field. **Note:** PS5 Library may still show `raw.githubusercontent.com` if its current UI labels sources by hostname rather than reading catalogue names. In that case, changing the visible label requires a PS5 Library update; the catalogue URL and eight emulator entries are unchanged.
+The catalogue declares its display name as **Gradwahls Source** using the root JSON `name` field. **Note:** PS5 Library may still show `raw.githubusercontent.com` if its current UI labels sources by hostname rather than reading catalogue names. In that case, changing the visible label requires a PS5 Library update; the catalogue URL and nine emulator entries still work.
 
 ```text
 https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/catalog.json
@@ -28,6 +28,7 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 | RetroArch PS5 | Multi-system | v3.0.0-beta-3 | [Source](https://github.com/mihawk-99/PS5_RetroArch) | PS5 title folder; ShadowMountPlus |
 | Castation | Dreamcast | v0.4.0 | [Source](https://github.com/BrinooTk/castation) | **Download-only** — manual Homebrew Launcher installation |
 | Porpoise (Dolphin) | GameCube / Wii | v3.0 | [Source](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5) | PS5 title folder |
+| PS5SX2 (PCSX2) | PlayStation 2 | 2.10 (`vk-285-171`) | [Source](https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171) | **Download-only/manual install** — two folder destinations, helper and own PS2 BIOS |
 | PS5SX3 (RPCS3) | PlayStation 3 | v7.1 | [User-hosted 7z](https://github.com/gradwahl/Gradwahls-emulators/releases/tag/v7.1) | Experimental title folder; separate no-data-mount helper; upstream and firmware redistribution rights unverified |
 | PS5X360 | Xbox 360 | v0.6.0 | [Source](https://github.com/BrinooTk/PS5X360) | PS5 title folder; experimental |
 | XPSemu | Original Xbox | Alpha-2.1 | [Source](https://github.com/ZiZc3/XPSemu) | Separate `helper.elf` and own BIOS/MCPX |
@@ -37,6 +38,7 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 ### Extra files / prerequisites
 
 - **Castation:** listed in PS5 Library for discoverability/download, but its archive contains an ELF-based Homebrew Launcher app, **not** a normal PS5 title. Extract it to `/data/homebrew/Castation`, then launch via Homebrew Launcher. [Instructions](https://github.com/BrinooTk/castation#installing).
+- **PS5SX2 (PlayStation 2):** download the [official PS5SX2 2.10 ZIP](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip) in PS5 Library, but **install manually**: it contains TWO top-level folders requiring different destinations. Copy **`PPSA99203/` to `/data/homebrew/PPSA99203/`** and **`PCSX2/` to `/data/PCSX2/`**. Keep the complete contents of each folder and avoid extra nesting. Place your PS2 BIOS dumped from your own console in `/data/PCSX2/bios/` and game backups in `/data/PCSX2/games/`. Load kstuff, then ShadowMount+, then **exactly one** PS5SX2 helper. The [standard helper `PS5SXHelper.elf`](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper.elf) is the upstream default and is in [our Payload Manager catalogue](payloads.json); the existing no-data-mount variant is an alternative for **ShadowMount+ 1.7-beta5fix1+**. Never load both, and reboot before switching. If launch shows `CE-107750-0`, check title folder and `eboot.bin` permissions (usually **755**). **Remove PS2 discs before shutdown** to avoid a developer-reported kernel panic. [Official setup/release notes](https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171).
 - **PS5SX3 (PlayStation 3):** `v7.1` is a 234 MB user-hosted `.7z` archive; PS5 Library supports `.7z` extraction. The GitHub release notes state that a **PS3 update file was added**, but the archive's internal contents and ability to install firmware have **not been independently verified**. Extract `PPSA99303/` to `/data/homebrew/PPSA99303/`, then use compatible ShadowMount+ and [the matching no-data-mount ELF in Payload Manager](payloads.json). Title ID `PPSA99303` is shared with other homebrew and may confuse PS5 Library. Obtain PS3 firmware from [Sony's official PS3 update site](https://www.playstation.com/en-gb/support/hardware/ps3/system-software/), and **do not redistribute Sony's firmware without permission**. Original developer and distribution rights for this build remain unverified.
 - **XPSemu:** install the ZIP title folder **and** separately obtain/load [the matching helper.elf](https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/helper.elf) with kstuff. Your own Xbox BIOS and MCPX dumps are required. [Instructions](https://github.com/ZiZc3/XPSemu#installation).
 - **Ruffle Flash PS5:** install the ZIP title folder **and** separately obtain/load [the matching helper.elf](https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/helper.elf) with kstuff. [Instructions](https://github.com/ZiZc3/Ruffle-Flash-PS5#install).
@@ -63,12 +65,12 @@ No ROMs, games, commercial binaries, console keys or BIOS/firmware dumps are bun
 
 | Catalog | URL path | Purpose |
 | --- | --- | --- |
-| **PS5 Library emulator downloads** | [`catalog.json`](catalog.json) | Recommended main source; 8 entries including Castation (manual ELF-based app) and the experimental PS5SX3 test build |
+| **PS5 Library emulator downloads** | [`catalog.json`](catalog.json) | Recommended main source; 9 entries including manual-install Castation and PS5SX2, plus the experimental PS5SX3 test build |
 | Multi-system | [`json/categories/multi-system.json`](json/categories/multi-system.json) | RetroArch |
 | Nintendo & Sega | [`json/categories/nintendo-sega.json`](json/categories/nintendo-sega.json) | Porpoise and Castation (manual-download only) |
 | Xbox | [`json/categories/xbox.json`](json/categories/xbox.json) | PS5X360 and XPSemu |
-| Other | [`json/categories/other.json`](json/categories/other.json) | PICO-8, Ruffle and PS5SX3 |
-| Pegasus DL | [`json/pegasus_catalog.json`](json/pegasus_catalog.json) | Pegasus-compatible `packages` feed (6 titles; Castation excluded as an ELF app and PS5SX3 excluded owing to title-ID collision/provenance uncertainty) |
+| Other | [`json/categories/other.json`](json/categories/other.json) | PICO-8, Ruffle, PS5SX2 and PS5SX3 |
+| Pegasus DL | [`json/pegasus_catalog.json`](json/pegasus_catalog.json) | Pegasus-compatible `packages` feed (6 titles; Castation and PS5SX2 excluded as manual-install apps, and PS5SX3 excluded owing to title-ID collision/provenance uncertainty) |
 
 ### Category catalogs
 
@@ -81,7 +83,7 @@ https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/json/categor
 https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/json/categories/other.json
 ```
 
-PS5 Library supports up to 30 catalogs and checks public catalogs periodically. All four together are equivalent to the combined eight-entry catalog. Castation is downloadable but cannot be installed as a normal PS5 title through PS5 Library.
+PS5 Library supports up to 30 catalogs and checks public catalogs periodically. All four together are equivalent to the combined nine-entry catalog. Castation is downloadable but cannot be installed as a normal PS5 title through PS5 Library.
 
 ## 🌐 Browseable web page (optional)
 
@@ -95,7 +97,7 @@ This web page is optional. **PS5 Library only needs the raw catalog JSON.**
 
 ## 🤖 Automatic update checking
 
-The [update workflow](.github/workflows/update-catalog.yml) checks developers' latest GitHub release assets **twice per day**, and regenerates the PS5 Library, category, Pegasus and web catalog files. Castation uses `manual_only: true` (to display manual setup instructions) together with `ps5_library: true` (to include its downloadable release in PS5 Library). The generator still excludes it from the Pegasus installable-title feed. A new commit is made only when a tracked release changes. It never downloads or rehosts binaries itself; the `v7.1` PS5SX3 user-provided `.7z` archive is separately hosted as a GitHub Release asset.
+The [update workflow](.github/workflows/update-catalog.yml) checks developers' latest GitHub release assets **twice per day**, and regenerates the PS5 Library, category, Pegasus and web catalog files. Castation uses `manual_only: true` (to display manual setup instructions) together with `ps5_library: true` (to include its downloadable release in PS5 Library). The generator excludes manual-install Castation and PS5SX2 from the Pegasus installable-title feed while retaining both as PS5 Library downloads. A new commit is made only when a tracked release changes. It never downloads or rehosts binaries itself; the `v7.1` PS5SX3 user-provided `.7z` archive is separately hosted as a GitHub Release asset.
 
 To run manually: **Actions → Update emulator catalogs → Run workflow**.
 
@@ -116,7 +118,7 @@ python scripts/update_catalog.py --refresh # check upstream GitHub releases
 ```text
 Gradwahls-emulators/
 ├── README.md
-├── catalog.json                    # 8 PS5 Library entries; Castation manual-download
+├── catalog.json                    # 9 PS5 Library entries; Castation/PS5SX2 manual-download
 ├── index.html                      # Optional GitHub Pages catalog
 ├── config/
 │   └── emulators.json              # Authoritative emulator list

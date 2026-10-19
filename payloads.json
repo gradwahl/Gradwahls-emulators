@@ -39,6 +39,19 @@
       "author": "Swordpdf",
       "source": "https://github.com/Swordpdf/PS5SX2",
       "details_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171"
+    },
+    {
+      "id": "ps5sx2-standard-helper",
+      "name": "PS5SX2 Helper (Standard)",
+      "filename": "ps5sx2-helper.elf",
+      "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper.elf",
+      "version": "vk-285-171",
+      "category": "Emulator Helpers",
+      "description": "Official recommended PS5SX2 / PCSX2 helper enabling /data access and PS2 disc tiles. Load kstuff and ShadowMount+ first, then only this helper. Alternatively use the no-data-mount variant already in this feed with ShadowMount+ 1.7-beta5fix1 or newer. Never load both helper variants in one session. BIOS and games are not included.",
+      "checksum": "9fa809eb10e1fe5149b2d031f55497d7b050e950ec5aec38bac7ebe1ef6da153",
+      "author": "Swordpdf",
+      "source": "https://github.com/Swordpdf/PS5SX2",
+      "details_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171"
     }
   ]
 }

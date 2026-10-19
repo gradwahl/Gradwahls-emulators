@@ -2,6 +2,22 @@
   "name": "Gradwahls Source - Other",
   "entries": [
     {
+      "id": "ps5sx2-playstation2",
+      "title": "PS5SX2 (PlayStation 2)",
+      "platform": "ps5",
+      "version": "vk-285-171",
+      "size": "18.52MB",
+      "description": "Native PS2 emulator based on PCSX2, build 2.10. Manual install: this ZIP contains TWO folders, PPSA99203/ for /data/homebrew/ and PCSX2/ for /data/. Requires kstuff, ShadowMount+, one PS5SX2 helper ELF, and your own PS2 BIOS and games. Do not treat this as a single-folder auto-installer.",
+      "cover": "https://raw.githubusercontent.com/Swordpdf/PS5SX2/main/ps5/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip",
+          "name": "PS5SX2-vk-285-171.zip"
+        }
+      ],
+      "title_id": "PPSA99203"
+    },
+    {
       "id": "ps5sx3-ps3",
       "title": "PS5SX3 (PlayStation 3)",
       "platform": "ps5",
