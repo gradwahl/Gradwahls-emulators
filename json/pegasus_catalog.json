@@ -4,15 +4,15 @@
     {
       "titleId": "PPSA99169",
       "title": "RetroArch PS5",
-      "version": "v3.0.0-beta-3",
+      "version": "v4.0.0-beta-4",
       "description": "RetroArch PS5 — multi-system emulator + EmulationStation.\n\nINSTALL\n1. PPSA99169/ → /data/homebrew/PPSA99169/\n2. Load jailbreak + ShadowMountPlus 1.7beta4+.\n\nBEFORE YOU PLAY\n• Choose RetroArch or EmulationStation; Square remembers.\n• WebUI: http://YOUR-PS5-IP:6769\n• Games: PPSA99169/content/ or add through WebUI.\n• BIOS: PPSA99169/system/ (system-dependent).\n\nIF IT WON'T START\n• Check title folder/eboot.bin and ShadowMount+.\n• Hold L1 at startup to choose the frontend again.\n• No desktop RetroArch cores; use included PS5 cores.",
       "posterUrl": "https://raw.githubusercontent.com/mihawk-99/PS5_RetroArch/main/sce_sys/icon0.png",
       "downloadSource": "https://github.com/mihawk-99/PS5_RetroArch",
-      "sizeBytes": 1553371958,
+      "sizeBytes": 1553672845,
       "downloadLinks": [
         {
           "name": "GitHub Releases",
-          "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v3.0.0-beta-3/PS5_RetroArch-v3.0.0-beta-3.zip"
+          "url": "https://github.com/mihawk-99/PS5_RetroArch/releases/download/v4.0.0-beta-4/PS5_RetroArch-v4.0.0-beta-4.zip"
         }
       ]
     },
