@@ -50,6 +50,22 @@
       "title_id": "PPSA99764"
     },
     {
+      "id": "psswanstation-ps1",
+      "title": "PSSwanStation (PlayStation 1)",
+      "platform": "ps5",
+      "version": "build24",
+      "size": "37.17MB",
+      "description": "PSSwanStation build 24 — PlayStation 1 emulator (SwanStation).\n\nINSTALL\n1. PPSA99248/ → /data/homebrew/PPSA99248/\n2. Check eboot.bin and sce_sys/ are directly inside.\n\nBEFORE YOU PLAY\n• Run kstuff + ShadowMount/homebrew title loader.\n• Games → PPSA99248/games/ (.chd, .cue/.bin, .iso, etc.).\n• BIOS optional: built-in OpenBIOS works; own PS1 BIOS → PPSA99248/bios/.\n• No extra helper ELF needed for basic local use.\n\nIF IT WON'T START\n• Check title folder, eboot.bin and kstuff.\n• Black screen? Check PPSA99248/psswanstation-boot.log.\n• Hold L1 + R1 at start for Safe start.\n• USB/external files need Lapy service or elfldr on port 9021.",
+      "cover": "https://raw.githubusercontent.com/Press5elect/PSSwanStation/ps5-port/ps5/sce_sys/icon0.png",
+      "files": [
+        {
+          "url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip",
+          "name": "PSSwanStation-PS5-PPSA99248-build24.zip"
+        }
+      ],
+      "title_id": "PPSA99248"
+    },
+    {
       "id": "ps5sx2-playstation2",
       "title": "PS5SX2 (PlayStation 2)",
       "platform": "ps5",

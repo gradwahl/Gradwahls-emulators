@@ -49,6 +49,22 @@
     "install_type": "Title folder"
   },
   {
+    "id": "psswanstation-ps1",
+    "title": "PSSwanStation (PlayStation 1)",
+    "repo": "Press5elect/PSSwanStation",
+    "title_id": "PPSA99248",
+    "category": "Other",
+    "group": "other",
+    "system": "PlayStation 1",
+    "version": "build24",
+    "size_bytes": 37172238,
+    "release_url": "https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip",
+    "cover": "https://raw.githubusercontent.com/Press5elect/PSSwanStation/ps5-port/ps5/sce_sys/icon0.png",
+    "description": "PSSwanStation build 24 — PlayStation 1 emulator (SwanStation).\n\nINSTALL\n1. PPSA99248/ → /data/homebrew/PPSA99248/\n2. Check eboot.bin and sce_sys/ are directly inside.\n\nBEFORE YOU PLAY\n• Run kstuff + ShadowMount/homebrew title loader.\n• Games → PPSA99248/games/ (.chd, .cue/.bin, .iso, etc.).\n• BIOS optional: built-in OpenBIOS works; own PS1 BIOS → PPSA99248/bios/.\n• No extra helper ELF needed for basic local use.\n\nIF IT WON'T START\n• Check title folder, eboot.bin and kstuff.\n• Black screen? Check PPSA99248/psswanstation-boot.log.\n• Hold L1 + R1 at start for Safe start.\n• USB/external files need Lapy service or elfldr on port 9021.",
+    "install_note": "Install the single PPSA99248/ folder from the official build24 ZIP to /data/homebrew/PPSA99248/ with eboot.bin and sce_sys/ immediately inside, and register it using ShadowMount+ or a compatible title loader. kstuff is required. For normal internal games, no separately downloaded helper ELF is needed; the archive includes its own sandbox-elevator.elf and lapy.elf. Put your own PS1 game backups into /data/homebrew/PPSA99248/games/ (CHD, cue+bin, ISO, PBP etc.). The built-in OpenBIOS works with many games; optionally use your legally dumped scph5500.bin/scph5501.bin/scph5502.bin in /data/homebrew/PPSA99248/bios/. Memory cards and save states are stored in PPSA99248/data/ unless you opt to keep files in /data/psswanstation/ (back up before replacing/deleting the title folder). USB drives, external save locations and other sandbox-exit features need a resident Lapy service or elfldr port 9021; they are not needed for simple title-folder games. If black screen or startup error, verify title folder/eboot.bin, kstuff, ShadowMount registration and permissions; read PPSA99248/psswanstation-boot.log and logs/psswanstation.log. Hold L1+R1 during launch for Safe start. Never boot PS5 with a disc already in a USB disc drive; upstream reports shutdown may hang.",
+    "install_type": "PS5 title folder (single folder)"
+  },
+  {
     "id": "ps5sx2-playstation2",
     "title": "PS5SX2 (PlayStation 2)",
     "repo": "Swordpdf/PS5SX2",

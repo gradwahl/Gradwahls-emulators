@@ -131,7 +131,7 @@ def main():
             print(f'Keeping pinned releases for {failures} project(s)', file=sys.stderr)
         CONFIG.write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     generate(items, check=args.check)
-    print(f'{len(items)} emulators ({sum(not x.get("manual_only", False) for x in items)} in PS5 Library); outputs {"verified" if args.check else "generated"}.')
+    print(f'{len(items)} emulators ({sum(x.get("ps5_library", not x.get("manual_only", False)) for x in items)} in PS5 Library); outputs {"verified" if args.check else "generated"}.')
 
 if __name__ == '__main__':
     main()

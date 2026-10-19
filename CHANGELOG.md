@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-19 — Added PSSwanStation PS1 emulator (build 24)
+
+- Added PSSwanStation (SwanStation PS1 emulator) as native title `PPSA99248` to PS5 Library main, mirror and Other category feeds and the Pegasus feed, plus website data.
+- Verified the user-uploaded 37,172,238-byte ZIP is byte-for-byte identical to the official Press5elect `build24` release asset, SHA-256 `7366078ce4f8c31fb6137ab9059c2886902315d432ee56662ed6ba246b32a53f`.
+- Added plain-text `INSTALL`, `BEFORE YOU PLAY`, `IF IT WON'T START` sections to its on-console description and a dedicated README setup guide, with the app path, game/BIOS paths, optional OpenBIOS, save-data precautions, sandbox-exit requirements, logs and Safe start.
+- No separately downloaded helper ELF is needed for ordinary local PS1 games; the ZIP includes its own sandbox support files. Existing Payload Manager helpers and all other catalogue downloads are unchanged.
+
+
 ## 2026-10-19 — Added clear setup instructions for seven more emulators
 
 - Replaced long single-paragraph PS5 Library descriptions with plain-text INSTALL, BEFORE YOU PLAY, and IF IT WON'T START sections for Castation, RetroArch PS5, Porpoise, PS5X360, XPSemu, PICO-8 PS5, and Ruffle Flash PS5.
