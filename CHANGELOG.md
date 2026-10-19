@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-19 — Improved PS5SX2 PS5 Library description layout
+
+- Reformatted the on-console PS5SX2 description as plain text with headings, line breaks, numbered installation folder paths and short troubleshooting bullets.
+- Preserved the two-folder manual-install warning, helper loading order, BIOS and games paths, permissions advice, and PS2-disc shutdown warning.
+- Updated the source configuration and generated main/mirror/Other category and web feeds together so scheduled refreshes retain the wording. All download URLs, version metadata and payload helper entries are unchanged.
+
+
 ## 2026-10-19 — Expanded PS5SX2 setup instructions in PS5 Library and README
 
 - Made the PS5SX2 PS5 Library description a self-contained manual-install guide, explaining both required folder destinations, BIOS/game paths, helper load order, 755 permissions and PS2 disc shutdown warning.
