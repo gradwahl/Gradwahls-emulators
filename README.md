@@ -11,7 +11,7 @@ A curated, emulator-only homebrew catalog for **[PS5 Library](https://github.com
 2. Add the following raw JSON URL (no access key needed for a public catalog).
 3. Select **Add catalog** (or **Refresh all** if it was already added).
 
-The catalogue declares its display name as **Gradwahls Source** using the root JSON `name` field. **Note:** PS5 Library may still show `raw.githubusercontent.com` if its current UI labels sources by hostname rather than reading catalogue names. In that case, changing the visible label requires a PS5 Library update; the catalogue URL and ten emulator entries still work.
+The catalogue declares its display name as **Gradwahls Source** using the root JSON `name` field. **Note:** PS5 Library may still show `raw.githubusercontent.com` if its current UI labels sources by hostname rather than reading catalogue names. In that case, changing the visible label requires a PS5 Library update; the catalogue URL and eleven emulator entries still work.
 
 ```text
 https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/catalog.json
@@ -27,6 +27,7 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 | --- | --- | --- | --- | --- |
 | RetroArch PS5 | Multi-system | v3.0.0-beta-3 | [Source](https://github.com/mihawk-99/PS5_RetroArch) | PS5 title folder; ShadowMountPlus |
 | Castation | Dreamcast | v0.4.0 | [Source](https://github.com/BrinooTk/castation) | **Download-only** — manual Homebrew Launcher installation |
+| Snes9x PS5 | Super Nintendo / SNES | v2.6 | [Source](https://github.com/MisterTemaki/snes9xPS5/releases/tag/v2.6) | Installer/helper ELF, optional native-title ZIP |
 | Porpoise (Dolphin) | GameCube / Wii | v3.0 | [Source](https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5) | PS5 title folder |
 | PSSwanStation | PlayStation 1 | build24 | [Source](https://github.com/Press5elect/PSSwanStation/releases/tag/build24) | Single PS5 title folder; built-in OpenBIOS, own PS1 games |
 | PS5SX2 (PCSX2) | PlayStation 2 | 2.10 (`vk-285-171`) | [Source](https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171) | **Download-only/manual install** — two folder destinations, helper and own PS2 BIOS |
@@ -40,6 +41,7 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 
 - **Castation:** listed in PS5 Library for discoverability/download, but its archive contains an ELF-based Homebrew Launcher app, **not** a normal PS5 title. Extract it to `/data/homebrew/Castation`, then launch via Homebrew Launcher. [Instructions](https://github.com/BrinooTk/castation#installing).
 - **PSSwanStation (PlayStation 1):** extract the official [build 24 ZIP](https://github.com/Press5elect/PSSwanStation/releases/download/build24/PSSwanStation-PS5-PPSA99248-build24.zip) and copy **`PPSA99248/` to `/data/homebrew/PPSA99248/`**. Load kstuff and register the title with ShadowMount or ShadowMount+. Games belong in `PPSA99248/games/`. An original BIOS is optional because OpenBIOS is built in; use only your own PS1 BIOS dumps in `PPSA99248/bios/` if needed. No separate Payload Manager helper is needed for basic local games. [Full setup guide](#installing-psswanstation-from-ps5-library).
+- **Snes9x PS5 (SNES):** use the official [Snes9x PS5 v2.6 combined installer/helper ELF](https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.6/Snes9xPS5-v2.6.elf), also in [Payload Manager](payloads.json). The ELF installs the title **`PPSA99922/`** and stays running as the `/data` helper; the matching ZIP in PS5 Library is for optional manual installation. Games and saves are stored under `/data/snes9x/`. [Full guide](#installing-snes9x-ps5-from-ps5-library).
 - **PS5SX2 (PlayStation 2):** download the [official PS5SX2 2.10 ZIP](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SX2-vk-285-171.zip) in PS5 Library, but **install manually**: it contains TWO top-level folders requiring different destinations. Copy **`PPSA99203/` to `/data/homebrew/PPSA99203/`** and **`PCSX2/` to `/data/PCSX2/`**. Keep the complete contents of each folder and avoid extra nesting. Place your PS2 BIOS dumped from your own console in `/data/PCSX2/bios/` and game backups in `/data/PCSX2/games/`. Load kstuff, then ShadowMount+, then **exactly one** PS5SX2 helper. The [standard helper `PS5SXHelper.elf`](https://github.com/Swordpdf/PS5SX2/releases/download/vk-285-171/PS5SXHelper.elf) is the upstream default and is in [our Payload Manager catalogue](payloads.json); the existing no-data-mount variant is an alternative for **ShadowMount+ 1.7-beta5fix1+**. Never load both, and reboot before switching. If launch shows `CE-107750-0`, check title folder and `eboot.bin` permissions (usually **755**). **Remove PS2 discs before shutdown** to avoid a developer-reported kernel panic. [Official setup/release notes](https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171).
 - **PS5SX3 (PlayStation 3):** `v7.1` is a 234 MB user-hosted `.7z` archive; PS5 Library supports `.7z` extraction. The GitHub release notes state that a **PS3 update file was added**, but the archive's internal contents and ability to install firmware have **not been independently verified**. Extract `PPSA99303/` to `/data/homebrew/PPSA99303/`, then use compatible ShadowMount+ and [the matching no-data-mount ELF in Payload Manager](payloads.json). Title ID `PPSA99303` is shared with other homebrew and may confuse PS5 Library. Obtain PS3 firmware from [Sony's official PS3 update site](https://www.playstation.com/en-gb/support/hardware/ps3/system-software/), and **do not redistribute Sony's firmware without permission**. Original developer and distribution rights for this build remain unverified.
 - **XPSemu:** install the ZIP title folder **and** separately obtain/load [the matching helper.elf](https://github.com/ZiZc3/XPSemu/releases/download/Alpha-2.1/helper.elf) with kstuff. Your own Xbox BIOS and MCPX dumps are required. [Instructions](https://github.com/ZiZc3/XPSemu#installation).
@@ -128,6 +130,30 @@ The public PS5 Library catalog is also at [`json/emulators.json`](json/emulators
 
 **Troubleshooting:** if Ruffle won't start, verify that the **Ruffle-specific helper** is loaded and the title folder has been registered. Some online-only Flash functions and demanding ActionScript 3 games may not work. [Official installation](https://github.com/ZiZc3/Ruffle-Flash-PS5#install).
 
+### Installing Snes9x PS5 from PS5 Library
+
+[Snes9x PS5 v2.6](https://github.com/MisterTemaki/snes9xPS5/releases/tag/v2.6) by MisterTemaki runs **Super Nintendo games** as a native PS5 home-screen app. Both uploads are byte-for-byte identical to its official release (ZIP SHA-256 `8535ff7e15533a06a37388fef2f655039bcc4600033fee8f4e75d68c07681b4b`, ELF SHA-256 `296c6b363c8dc26267e968ed5869059d9e059920ced9206c1768321017eb62c2`). The title ID is **`PPSA99922`**.
+
+**INSTALL**
+
+1. **Recommended: use the ELF installer/helper.** Start your jailbreak and **kstuff/kstuff-lite**, with an ELF loader on **port 9021** and ShadowMountPlus available. In [Gradwahl's Payload Manager source](payloads.json) load **Snes9x PS5 Installer + Helper** (or send the official [`Snes9xPS5-v2.6.elf`](https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.6/Snes9xPS5-v2.6.elf) yourself).
+2. The ELF **installs the complete `PPSA99922/` native app** into **`/data/homebrew/PPSA99922/`** and stays active as the Snes9x helper on port **9089**. ShadowMountPlus registers the title: open the Snes9x PS5 home-screen icon. Keep the matching version ELF in your autoload for future sessions.
+3. **Alternative manual ZIP method:** download [`Snes9xPS5-v2.6-PPSA99922.zip`](https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.6/Snes9xPS5-v2.6-PPSA99922.zip) through PS5 Library and copy its **`PPSA99922/`** folder into **`/data/homebrew/PPSA99922/`**. Check that `eboot.bin`, `sce_sys/` and `sce_module/` sit directly inside it. You **still need the helper** (or a supported daemon/loader to grant sandbox access), even with a manually installed ZIP.
+
+**BEFORE YOU PLAY**
+
+- Put your own SNES ROMs (`.sfc`, `.smc`, `.zip`, `.gz` and other supported formats) into **`/data/snes9x/roms/`**. Subdirectories work, as does `snes9x/roms/` on USB.
+- Standard SNES games need **no BIOS**; niche **BS-X or Sufami Turbo** games may need BIOS dumps from hardware you own in `/data/snes9x/bios/`.
+- Saves, states, covers, cheats and settings all live in **`/data/snes9x/`** and survive title-folder updates. **L3 + R3** brings up the in-game pause menu for save states, cheats and options. For updates use **Settings → Updates**, and replace the ELF in autoload when an updated helper becomes available.
+
+**IF IT WON'T START**
+
+- **"Snes9x PS5 has no access to /data"** means no helper answered and an ELF loader may not be listening. Run the **matching v2.6 ELF**; verify kstuff and ELF loader port **9021**.
+- If the app icon is missing or launch fails, verify **`/data/homebrew/PPSA99922/eboot.bin`**, folder placement and permissions, and ShadowMountPlus registration. Review **`/data/snes9x/logs/`** (`boot.log`, `installer.log`, `helper.log`).
+- **Old title collision:** v2.5 and earlier used **`PPSA99009`**, which **ProsperoLichess** also uses. Never delete `/data/homebrew/PPSA99009/` unless you've verified that folder actually belongs to your old Snes9x installation rather than another app.
+
+[Official developer installation guide](https://github.com/MisterTemaki/snes9xPS5#install-and-play) · [Official v2.6 release](https://github.com/MisterTemaki/snes9xPS5/releases/tag/v2.6)
+
 ### Installing PSSwanStation from PS5 Library
 
 [PSSwanStation build 24](https://github.com/Press5elect/PSSwanStation/releases/tag/build24) runs **SwanStation (the DuckStation-derived PlayStation 1 emulator)** as a native PS5 homebrew title. Your uploaded ZIP was checked against the developer's GitHub release: **SHA-256 `7366078ce4f8c31fb6137ab9059c2886902315d432ee56662ed6ba246b32a53f`**, 37,172,238 bytes. The on-console catalogue description also contains a short guide.
@@ -187,12 +213,12 @@ No ROMs, games, commercial binaries, console keys or BIOS/firmware dumps are bun
 
 | Catalog | URL path | Purpose |
 | --- | --- | --- |
-| **PS5 Library emulator downloads** | [`catalog.json`](catalog.json) | Recommended main source; 10 entries including PSSwanStation, manual-install Castation and PS5SX2, plus the experimental PS5SX3 test build |
+| **PS5 Library emulator downloads** | [`catalog.json`](catalog.json) | Recommended main source; 11 entries including Snes9x PS5 and PSSwanStation, manual-install Castation and PS5SX2, plus experimental PS5SX3 |
 | Multi-system | [`json/categories/multi-system.json`](json/categories/multi-system.json) | RetroArch |
-| Nintendo & Sega | [`json/categories/nintendo-sega.json`](json/categories/nintendo-sega.json) | Porpoise and Castation (manual-download only) |
+| Nintendo & Sega | [`json/categories/nintendo-sega.json`](json/categories/nintendo-sega.json) | Snes9x PS5, Porpoise and Castation (manual-download only) |
 | Xbox | [`json/categories/xbox.json`](json/categories/xbox.json) | PS5X360 and XPSemu |
 | Other | [`json/categories/other.json`](json/categories/other.json) | PICO-8, Ruffle, PSSwanStation, PS5SX2 and PS5SX3 |
-| Pegasus DL | [`json/pegasus_catalog.json`](json/pegasus_catalog.json) | Pegasus-compatible `packages` feed (7 titles; Castation and PS5SX2 excluded as manual-install apps, and PS5SX3 excluded owing to title-ID collision/provenance uncertainty) |
+| Pegasus DL | [`json/pegasus_catalog.json`](json/pegasus_catalog.json) | Pegasus-compatible `packages` feed (8 titles; Castation and PS5SX2 excluded as manual-install apps, and PS5SX3 excluded owing to title-ID collision/provenance uncertainty) |
 
 ### Category catalogs
 
@@ -205,7 +231,7 @@ https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/json/categor
 https://raw.githubusercontent.com/gradwahl/Gradwahls-emulators/main/json/categories/other.json
 ```
 
-PS5 Library supports up to 30 catalogs and checks public catalogs periodically. All four together are equivalent to the combined ten-entry catalog. Castation is downloadable but cannot be installed as a normal PS5 title through PS5 Library.
+PS5 Library supports up to 30 catalogs and checks public catalogs periodically. All four together are equivalent to the combined eleven-entry catalog. Castation is downloadable but cannot be installed as a normal PS5 title through PS5 Library.
 
 ## 🌐 Browseable web page (optional)
 
@@ -240,7 +266,7 @@ python scripts/update_catalog.py --refresh # check upstream GitHub releases
 ```text
 Gradwahls-emulators/
 ├── README.md
-├── catalog.json                    # 10 PS5 Library entries; Castation/PS5SX2 manual-download
+├── catalog.json                    # 11 PS5 Library entries; Castation/PS5SX2 manual-download
 ├── index.html                      # Optional GitHub Pages catalog
 ├── config/
 │   └── emulators.json              # Authoritative emulator list

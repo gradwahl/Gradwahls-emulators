@@ -52,6 +52,19 @@
       "author": "Swordpdf",
       "source": "https://github.com/Swordpdf/PS5SX2",
       "details_url": "https://github.com/Swordpdf/PS5SX2/releases/tag/vk-285-171"
+    },
+    {
+      "id": "snes9x-ps5-installer-helper",
+      "name": "Snes9x PS5 Installer + Helper",
+      "filename": "snes9x-ps5-v2.6-installer-helper.elf",
+      "url": "https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.6/Snes9xPS5-v2.6.elf",
+      "version": "v2.6",
+      "category": "Emulator Installers / Helpers",
+      "description": "Official Snes9x PS5 v2.6 installer and helper in one ELF. Sending via PS5 Payload Manager/elfldr port 9021 installs or updates title PPSA99922 to /data/homebrew/PPSA99922/ and stays running as its sandbox helper (port 9089). Run kstuff and ShadowMountPlus. Keep version-matching ELF in autoload; do NOT use an old v2.5/PPSA99009 helper. Games, saves and settings are in /data/snes9x/. The PS5 Library ZIP can instead be downloaded for manual installation.",
+      "checksum": "296c6b363c8dc26267e968ed5869059d9e059920ced9206c1768321017eb62c2",
+      "author": "MisterTemaki",
+      "source": "https://github.com/MisterTemaki/snes9xPS5",
+      "details_url": "https://github.com/MisterTemaki/snes9xPS5/releases/tag/v2.6"
     }
   ]
 }

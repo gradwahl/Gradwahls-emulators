@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-19 — Added Snes9x PS5 v2.6 emulator and installer/helper ELF
+
+- Added native Super Nintendo emulator Snes9x PS5 v2.6 (`PPSA99922`) to main and mirror PS5 Library, Nintendo & Sega category, website and Pegasus feed.
+- Both uploaded binaries match MisterTemaki's upstream release: ZIP SHA-256 `8535ff7e15533a06a37388fef2f655039bcc4600033fee8f4e75d68c07681b4b`, 25,109,331 bytes; ELF SHA-256 `296c6b363c8dc26267e968ed5869059d9e059920ced9206c1768321017eb62c2`, 18,578,368 bytes.
+- Added one new Payload Manager entry `Snes9x PS5 Installer + Helper` with a distinct local filename. The ELF installs the title and stays as a /data sandbox helper; the official ZIP remains an optional manual download.
+- Added on-console INSTALL / BEFORE YOU PLAY / IF IT WON'T START sections and full README guide covering loader and kstuff, ShadowMountPlus, ROM and save paths, title ID changes and logs.
+- Existing emulator and payload entries preserved.
+
+
 ## 2026-10-19 — Added PSSwanStation PS1 emulator (build 24)
 
 - Added PSSwanStation (SwanStation PS1 emulator) as native title `PPSA99248` to PS5 Library main, mirror and Other category feeds and the Pegasus feed, plus website data.
