@@ -37,14 +37,14 @@
       "id": "snes9x-ps5",
       "title": "Snes9x PS5 (Super Nintendo)",
       "platform": "ps5",
-      "version": "v2.7",
+      "version": "v2.8",
       "size": "26.91MB",
       "description": "Snes9x PS5 v2.6 — Super Nintendo (SNES) emulator.\n\nINSTALL\n1. Recommended: send Snes9xPS5-v2.6.elf to payload loader.\n2. ELF installs PPSA99922/ into /data/homebrew/ AND stays helper.\n3. Or manually extract ZIP to /data/homebrew/PPSA99922/.\n\nBEFORE YOU PLAY\n• Run kstuff + ShadowMountPlus + matching Snes9x helper.\n• ELF loader port 9021; ROMs → /data/snes9x/roms/.\n• Standard SNES needs no BIOS; special BIOS → /data/snes9x/bios/.\n• L3 + R3 opens the in-game pause menu.\n\nIF IT WON'T START\n• No /data access? Send v2.6 Snes9x ELF again.\n• Check PPSA99922/eboot.bin, folder and title registration.\n• Logs → /data/snes9x/logs/.\n• Old Snes9x (PPSA99009) conflicts with ProsperoLichess!",
       "cover": "https://raw.githubusercontent.com/MisterTemaki/snes9xPS5/main/ps5/app/sce_sys/icon0.png",
       "files": [
         {
-          "url": "https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.7/Snes9xPS5-v2.7-PPSA99922.zip",
-          "name": "Snes9xPS5-v2.7-PPSA99922.zip"
+          "url": "https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.8/Snes9xPS5-v2.8-PPSA99922.zip",
+          "name": "Snes9xPS5-v2.8-PPSA99922.zip"
         }
       ],
       "title_id": "PPSA99922"
@@ -165,13 +165,13 @@
       "id": "ruffle-flash-ps5",
       "title": "Ruffle Flash PS5",
       "platform": "ps5",
-      "version": "1.2.0",
-      "size": "13.64MB",
+      "version": "v1.3.0",
+      "size": "13.65MB",
       "description": "Ruffle Flash PS5 v1.2.0 — SWF / Flash emulator.\n\nINSTALL\n1. PPSA68091/ → /data/homebrew/PPSA68091/\n2. Load kstuff + ShadowMountPlus + Ruffle Helper ELF.\n\nBEFORE YOU PLAY\n• Put .swf games in /data/ruffle/games/.\n• Keep each game's extra files in its own folder.\n• Start Ruffle Flash from the PS5 home screen.\n\nIF IT WON'T START\n• Check Ruffle's matching helper is loaded.\n• Check title folder/eboot.bin and ShadowMount+.\n• Log: /data/ruffle/ruffle.log",
       "cover": "https://raw.githubusercontent.com/ZiZc3/Ruffle-Flash-PS5/main/ps5/sce_sys/icon0.png",
       "files": [
         {
-          "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/1.2.0/PPSA68091.zip",
+          "url": "https://github.com/ZiZc3/Ruffle-Flash-PS5/releases/download/v1.3.0/PPSA68091.zip",
           "name": "PPSA68091.zip"
         }
       ],
