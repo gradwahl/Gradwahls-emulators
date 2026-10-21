@@ -37,14 +37,14 @@
       "id": "porpoise-dolphin-ps5",
       "title": "Porpoise (GameCube / Wii)",
       "platform": "ps5",
-      "version": "v3.0",
-      "size": "31.02MB",
+      "version": "v4.0",
+      "size": "31.29MB",
       "description": "Porpoise v3.0 — GameCube + Wii emulator (Dolphin).\n\nINSTALL\n1. PPSA99764/ → /data/homebrew/PPSA99764/\n2. Register with ShadowMountPlus 1.7beta4+.\n\nBEFORE YOU PLAY\n• Games → /data/porpoise/games/ or USB.\n• Load kstuff + supported jailbreak (etaHEN, etc.).\n• Keep saves in /data/porpoise/ when updating.\n\nIF IT WON'T START\n• Check ShadowMount+ version, folder and eboot.bin.\n• Can't access /data? Check etaHEN Legacy Command Server.\n• Use FTP binary transfers when copying files.",
       "cover": "https://raw.githubusercontent.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/Main/sce_sys/icon0.png",
       "files": [
         {
-          "url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v3.0/Porpoise-3.0.zip",
-          "name": "Porpoise-3.0.zip"
+          "url": "https://github.com/elripalda/Porpoise-Dolphin-Emulator-for-PS5/releases/download/v4.0/Porpoise-4.0.zip",
+          "name": "Porpoise-4.0.zip"
         }
       ],
       "title_id": "PPSA99764"
