@@ -19,15 +19,15 @@
     {
       "titleId": "PPSA99922",
       "title": "Snes9x PS5 (Super Nintendo)",
-      "version": "v2.8",
+      "version": "v2.9",
       "description": "Snes9x PS5 v2.6 — Super Nintendo (SNES) emulator.\n\nINSTALL\n1. Recommended: send Snes9xPS5-v2.6.elf to payload loader.\n2. ELF installs PPSA99922/ into /data/homebrew/ AND stays helper.\n3. Or manually extract ZIP to /data/homebrew/PPSA99922/.\n\nBEFORE YOU PLAY\n• Run kstuff + ShadowMountPlus + matching Snes9x helper.\n• ELF loader port 9021; ROMs → /data/snes9x/roms/.\n• Standard SNES needs no BIOS; special BIOS → /data/snes9x/bios/.\n• L3 + R3 opens the in-game pause menu.\n\nIF IT WON'T START\n• No /data access? Send v2.6 Snes9x ELF again.\n• Check PPSA99922/eboot.bin, folder and title registration.\n• Logs → /data/snes9x/logs/.\n• Old Snes9x (PPSA99009) conflicts with ProsperoLichess!",
       "posterUrl": "https://raw.githubusercontent.com/MisterTemaki/snes9xPS5/main/ps5/app/sce_sys/icon0.png",
       "downloadSource": "https://github.com/MisterTemaki/snes9xPS5",
-      "sizeBytes": 26913811,
+      "sizeBytes": 26992707,
       "downloadLinks": [
         {
           "name": "GitHub Releases",
-          "url": "https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.8/Snes9xPS5-v2.8-PPSA99922.zip"
+          "url": "https://github.com/MisterTemaki/snes9xPS5/releases/download/v2.9/Snes9xPS5-v2.9-PPSA99922.zip"
         }
       ]
     },
